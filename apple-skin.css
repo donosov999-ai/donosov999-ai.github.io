@@ -1,0 +1,36 @@
+/* PsyGames — Apple-skin: общий слой поверх инлайн-CSS страниц.
+   Грузится последним → переопределяет палитру (через :root vars, которые
+   используют все страницы) + даёт frosted-glass карточки и Apple-типографику.
+   Совпадает с v2-главной. */
+:root{
+  --bg:#08080b; --bg2:#0e0e13;
+  --surface:rgba(255,255,255,.05); --card:rgba(255,255,255,.05);
+  --line:rgba(255,255,255,.085); --txt:#f4f4f7; --mut:#9b9ba6;
+  --accent:#7c5cff; --accent2:#7c5cff;
+}
+body{
+  -webkit-font-smoothing:antialiased;
+  font-family:-apple-system,"SF Pro Display",BlinkMacSystemFont,Inter,"Segoe UI",Roboto,"Noto Sans",sans-serif;
+  background:#08080b radial-gradient(1100px 560px at 50% -10%, rgba(124,92,255,.16), transparent 60%) fixed !important;
+}
+h1,h2,h3{letter-spacing:-.03em}
+h1{font-weight:800}
+nav{background:rgba(8,8,11,.6)!important;backdrop-filter:saturate(160%) blur(16px)}
+/* карточки → frosted glass + мягкая тень, без жёстких рамок */
+.card,.prog,.cat,.dom,.sci,.box,.hook{
+  background:var(--surface)!important;
+  border:1px solid var(--line)!important;
+  border-radius:18px!important;
+  backdrop-filter:blur(22px) saturate(140%);
+  box-shadow:0 18px 50px -22px rgba(0,0,0,.7)!important;
+}
+.dom{border-radius:999px!important}
+.chip{background:rgba(255,255,255,.06)!important;border-color:var(--line)!important;border-radius:10px!important}
+/* акцент / кнопки */
+.btn,.btn.p{border-radius:14px!important}
+.btn.p{box-shadow:0 8px 28px rgba(124,92,255,.38)}
+.band{background:linear-gradient(135deg,rgba(124,92,255,.2),var(--surface))!important;border:1px solid var(--line)!important;border-radius:24px!important}
+.langbar button{border-radius:999px!important}
+.langbar button.on{background:var(--txt)!important;color:#000!important;border-color:var(--txt)!important}
+code{background:#000!important}
+a.link,.prog .aud{color:var(--accent)!important}
