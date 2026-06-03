@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PsyGames — All 48 Trainers</title>
+<meta name="description" content="All 48 PsyGames cognitive trainers across memory, attention, logic and speed — validated paradigms from cognitive science.">
+<style>
+  :root{--bg:#0f0e17;--card:#1a1925;--accent:#a855f7;--accent2:#fbbf24;--txt:#e8e6f0;--mut:#9b96b0;--line:#2a2838}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Noto Sans",sans-serif;line-height:1.55}
+  .wrap{max-width:920px;margin:0 auto;padding:18px 20px 60px}
+  nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+  nav a{color:var(--mut);text-decoration:none}nav a.brand{color:var(--txt);font-weight:800;font-size:16px;margin-right:auto}nav a:hover{color:var(--txt)}
+  .langbar{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}
+  .langbar button{background:var(--card);color:var(--mut);border:1px solid var(--line);border-radius:8px;padding:4px 10px;font-size:12.5px;cursor:pointer}
+  .langbar button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+  h1{font-size:30px;font-weight:800;margin:18px 0 6px;letter-spacing:-.5px}
+  .intro{color:var(--mut);font-size:15px;margin-bottom:22px}
+  .cat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px}
+  .cat .h{font-weight:800;font-size:17px;margin-bottom:2px}
+  .cat .d{color:var(--mut);font-size:13px;margin-bottom:10px}
+  .chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:5px 10px;font-size:12.5px;color:var(--txt)}
+  .band{background:linear-gradient(135deg,#2a1a4a,#1a1925);border:1px solid var(--line);border-radius:16px;padding:24px;text-align:center;margin:30px 0}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;background:var(--accent);color:#fff;padding:13px 26px;border-radius:11px}
+  footer{text-align:center;color:var(--mut);font-size:12.5px;margin-top:34px;border-top:1px solid var(--line);padding-top:20px}
+  a.link{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="/">🧠 PsyGames</a>
+    <a href="/programs/" data-i18n="nav_prog"></a>
+    <a href="/games/" data-i18n="nav_games"></a>
+    <a href="/benefits/" data-i18n="nav_ben"></a>
+    <a href="/about/" data-i18n="nav_about"></a>
+    <a href="/download/" data-i18n="nav_dl"></a>
+  </nav>
+  <div class="langbar" id="langbar"></div>
+
+  <h1 data-i18n="g_title"></h1>
+  <p class="intro" data-i18n="g_intro"></p>
+  <div id="cats"></div>
+
+  <div class="band"><a class="btn" href="/download/" data-i18n="cta_dl"></a></div>
+  <footer><span data-i18n="foot"></span> · <a class="link" href="/privacy/" data-i18n="priv"></a></footer>
+</div>
+<script>
+const CATGAMES={
+ memory:["Word Pairs","Mnemonics","N-back","Digit Span","Memory Matrix","Picture Pairs","Reading Span","Corsi Block","OSPAN","Spatial Span","Span","Story Recall"],
+ attention:["Schulte Table","Proofreading","Find Differences","Visual Search","Posner","ANT","CPT"],
+ logic:["Tower of Hanoi","Sudoku","Anagrams","Matrix / Pattern","Set","Mental Rotation","Tower of London","Trail Making","Task Switching","WCST","BART","Iowa Gambling","PRL","Phonemic Fluency"],
+ action:["Attention Conflict","Inhibition","Stroop","Go/No-Go","Stop-Signal","Flanker","Emotional Stroop","Simon","Counter","Math Sprint","Number Bonds","Targets","Choice RT","SDMT","RMET"]
+};
+const CATORDER=["memory","attention","logic","action"];
+const I18N={
+ en:{name:"English",nav_prog:"Programs",nav_games:"Games",nav_ben:"Benefits",nav_about:"About",nav_dl:"Download",
+  g_title:"All 48 trainers",g_intro:"Validated paradigms from cognitive science, grouped into four domains. 12 memory · 7 attention · 14 logic · 15 action = 48.",
+  cats:{memory:["🧠 Memory","Hold and manipulate more information at once."],attention:["🎯 Attention","Focus, vigilance and resistance to distraction."],logic:["🧩 Logic","Reasoning, planning, flexibility and risk."],action:["⚡ Action / Speed","Inhibition, reaction, processing speed and math."]},
+  cta_dl:"Get all 48 free",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Privacy"},
+ ru:{name:"Русский",nav_prog:"Программы",nav_games:"Игры",nav_ben:"Польза",nav_about:"О проекте",nav_dl:"Скачать",
+  g_title:"Все 48 тренажёров",g_intro:"Валидированные парадигмы когнитивной науки, сгруппированы в четыре домена. 12 память · 7 внимание · 14 логика · 15 действие = 48.",
+  cats:{memory:["🧠 Память","Удерживать и обрабатывать больше за раз."],attention:["🎯 Внимание","Концентрация, устойчивость, сопротивление отвлечениям."],logic:["🧩 Логика","Рассуждение, планирование, гибкость, риск."],action:["⚡ Действие / Скорость","Торможение, реакция, скорость обработки, счёт."]},
+  cta_dl:"Получить все 48 бесплатно",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Конфиденциальность"},
+ es:{name:"Español",nav_prog:"Programas",nav_games:"Juegos",nav_ben:"Beneficios",nav_about:"Acerca de",nav_dl:"Descargar",
+  g_title:"Los 48 entrenadores",g_intro:"Paradigmas validados de la ciencia cognitiva, en cuatro dominios. 12 memoria · 7 atención · 14 lógica · 15 acción = 48.",
+  cats:{memory:["🧠 Memoria","Retener y manejar más información a la vez."],attention:["🎯 Atención","Concentración, vigilancia y resistencia a la distracción."],logic:["🧩 Lógica","Razonamiento, planificación, flexibilidad y riesgo."],action:["⚡ Acción / Velocidad","Inhibición, reacción, velocidad de procesamiento y cálculo."]},
+  cta_dl:"Consíguelos los 48 gratis",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Privacidad"},
+ de:{name:"Deutsch",nav_prog:"Programme",nav_games:"Spiele",nav_ben:"Nutzen",nav_about:"Über",nav_dl:"Download",
+  g_title:"Alle 48 Trainer",g_intro:"Validierte Paradigmen der kognitiven Wissenschaft, in vier Domänen. 12 Gedächtnis · 7 Aufmerksamkeit · 14 Logik · 15 Aktion = 48.",
+  cats:{memory:["🧠 Gedächtnis","Mehr Information gleichzeitig halten und verarbeiten."],attention:["🎯 Aufmerksamkeit","Konzentration, Wachsamkeit, Widerstand gegen Ablenkung."],logic:["🧩 Logik","Schlussfolgern, Planen, Flexibilität und Risiko."],action:["⚡ Aktion / Tempo","Hemmung, Reaktion, Verarbeitungstempo und Rechnen."]},
+  cta_dl:"Alle 48 kostenlos",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Datenschutz"},
+ zh:{name:"中文",nav_prog:"课程",nav_games:"游戏",nav_ben:"益处",nav_about:"关于",nav_dl:"下载",
+  g_title:"全部 48 个训练",g_intro:"认知科学中的验证范式，分为四个领域。记忆 12 · 注意力 7 · 逻辑 14 · 行动 15 = 48。",
+  cats:{memory:["🧠 记忆","一次保持并处理更多信息。"],attention:["🎯 注意力","专注、警觉与抗干扰。"],logic:["🧩 逻辑","推理、计划、灵活性与风险。"],action:["⚡ 行动 / 速度","抑制、反应、处理速度与计算。"]},
+  cta_dl:"免费获取全部 48 个",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"隐私"},
+ hi:{name:"हिन्दी",nav_prog:"प्रोग्राम",nav_games:"गेम",nav_ben:"लाभ",nav_about:"परिचय",nav_dl:"डाउनलोड",
+  g_title:"सभी 48 ट्रेनर",g_intro:"संज्ञानात्मक विज्ञान के मान्य पैराडाइम, चार क्षेत्रों में। याददाश्त 12 · ध्यान 7 · तर्क 14 · क्रिया 15 = 48।",
+  cats:{memory:["🧠 याददाश्त","एक साथ अधिक जानकारी रखना व संभालना।"],attention:["🎯 ध्यान","एकाग्रता, सतर्कता व विकर्षण-प्रतिरोध।"],logic:["🧩 तर्क","तर्क, योजना, लचीलापन व जोखिम।"],action:["⚡ क्रिया / गति","निषेध, प्रतिक्रिया, प्रसंस्करण गति व गणित।"]},
+  cta_dl:"सभी 48 मुफ़्त पाएँ",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"गोपनीयता"}
+};
+const ORDER=["en","ru","es","de","zh","hi"];
+function apply(l){
+ const d=I18N[l]||I18N.en;document.documentElement.lang=l;
+ document.querySelectorAll("[data-i18n]").forEach(e=>{e.textContent=d[e.getAttribute("data-i18n")]||"";});
+ const c=document.getElementById("cats");c.innerHTML="";
+ CATORDER.forEach(k=>{const m=d.cats[k];const el=document.createElement("div");el.className="cat";
+  el.innerHTML='<div class="h"></div><div class="d"></div><div class="chips"></div>';
+  el.querySelector(".h").textContent=m[0];el.querySelector(".d").textContent=m[1];
+  const ch=el.querySelector(".chips");CATGAMES[k].forEach(g=>{const s=document.createElement("span");s.className="chip";s.textContent=g;ch.appendChild(s);});
+  c.appendChild(el);});
+ document.querySelectorAll("#langbar button").forEach(b=>b.classList.toggle("on",b.dataset.l===l));
+ try{localStorage.setItem("pg_lang",l);}catch(e){}
+}
+const bar=document.getElementById("langbar");
+ORDER.forEach(l=>{const b=document.createElement("button");b.textContent=I18N[l].name;b.dataset.l=l;b.onclick=()=>apply(l);bar.appendChild(b);});
+let init="en";try{const s=localStorage.getItem("pg_lang");if(s&&I18N[s])init=s;else{const n=(navigator.language||"en").slice(0,2);if(I18N[n])init=n;}}catch(e){}
+apply(init);
+</script>
+</body>
+</html>

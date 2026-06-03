@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PsyGames — Benefits & Science</title>
+<meta name="description" content="What PsyGames trains and what the science actually says — honestly, without overclaiming.">
+<style>
+  :root{--bg:#0f0e17;--card:#1a1925;--accent:#a855f7;--accent2:#fbbf24;--txt:#e8e6f0;--mut:#9b96b0;--line:#2a2838}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Noto Sans",sans-serif;line-height:1.6}
+  .wrap{max-width:860px;margin:0 auto;padding:18px 20px 60px}
+  nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+  nav a{color:var(--mut);text-decoration:none}
+  nav a.brand{color:var(--txt);font-weight:800;font-size:16px;margin-right:auto}
+  nav a:hover{color:var(--txt)}
+  .langbar{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}
+  .langbar button{background:var(--card);color:var(--mut);border:1px solid var(--line);border-radius:8px;padding:4px 10px;font-size:12.5px;cursor:pointer}
+  .langbar button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+  h1{font-size:30px;font-weight:800;margin:18px 0 6px;letter-spacing:-.5px}
+  .intro{color:var(--mut);font-size:15px;margin-bottom:24px}
+  .doms{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:30px}
+  .dom{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+  .dom .n{font-weight:700;font-size:16px;margin-bottom:4px}
+  .dom .d{color:var(--mut);font-size:13.5px}
+  h2{font-size:22px;font-weight:800;margin:26px 0 10px}
+  .sci{background:var(--card);border-radius:12px;padding:18px;font-size:14px;color:var(--mut)}
+  .sci .yes{color:#7ee787}.sci .no{color:#fbbf24}
+  .sci p{margin:8px 0}
+  .src{font-size:12px;color:var(--mut);margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+  .band{background:linear-gradient(135deg,#2a1a4a,#1a1925);border:1px solid var(--line);border-radius:16px;padding:26px;text-align:center;margin:34px 0}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;background:var(--accent);color:#fff;padding:13px 26px;border-radius:11px}
+  footer{text-align:center;color:var(--mut);font-size:12.5px;margin-top:34px;border-top:1px solid var(--line);padding-top:20px}
+  a.link{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="/">🧠 PsyGames</a>
+    <a href="/programs/" data-i18n="nav_prog"></a>
+    <a href="/benefits/" data-i18n="nav_ben"></a>
+    <a href="https://donosov999-ai.github.io/psygames-web/" data-i18n="nav_play"></a>
+    <a href="/download/" data-i18n="nav_dl"></a>
+  </nav>
+  <div class="langbar" id="langbar"></div>
+
+  <h1 data-i18n="b_title"></h1>
+  <p class="intro" data-i18n="b_intro"></p>
+  <div class="doms" id="doms"></div>
+
+  <h2 data-i18n="sci_h"></h2>
+  <div class="sci">
+    <p><span class="yes">✓</span> <span data-i18n="sci_yes"></span></p>
+    <p><span class="no">⚠</span> <span data-i18n="sci_no"></span></p>
+    <p data-i18n="sci_app"></p>
+    <div class="src" data-i18n="sci_src"></div>
+  </div>
+
+  <div class="band"><a class="btn" href="/download/" data-i18n="cta_dl"></a></div>
+  <footer><span data-i18n="foot"></span> · <a class="link" href="/privacy/" data-i18n="priv"></a></footer>
+</div>
+<script>
+const I18N={
+ en:{name:"English",nav_prog:"Programs",nav_ben:"Benefits",nav_play:"Play",nav_dl:"Download",
+  b_title:"What it trains — and what the science says",b_intro:"Four cognitive domains, trained by validated tasks from cognitive science. Here is the honest version of what that does and does not do.",
+  doms:[["🧠 Memory","Working and short-term memory — hold and manipulate more information at once."],["🎯 Attention","Focus, sustained vigilance and resistance to distraction."],["🧩 Logic","Reasoning, planning and flexible problem-solving."],["⚡ Speed","Processing speed and reaction — think and respond faster."]],
+  sci_h:"Honest about the science",
+  sci_yes:"Proven: regular practice produces clear, measurable improvement on the trained skills, and several paradigms (e.g. speed-of-processing, working memory) show transfer to related real tasks.",
+  sci_no:"Not proven: broad claims like “you will get smarter” or “+IQ points”. We do not make them — that kind of marketing got Lumosity fined by the US FTC.",
+  sci_app:"Our approach: validated tasks (Stroop, N-back, CPT, SDMT, Tower of London…), no inflated promises, and your own progress tracked over time.",
+  sci_src:"Sources: Jaeggi et al., 2008 (PNAS) — working-memory training; ACTIVE trial, Rebok et al., 2014 (JAMA Intern Med) — speed training, effects lasting 10+ years; Sala & Gobet, 2017 (Educational Research Review).",
+  cta_dl:"Try it free",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Privacy"},
+ ru:{name:"Русский",nav_prog:"Программы",nav_ben:"Польза",nav_play:"Играть",nav_dl:"Скачать",
+  b_title:"Что тренирует — и что говорит наука",b_intro:"Четыре когнитивных домена, тренируемые валидированными задачами из когнитивной науки. Вот честная версия того, что это даёт, а что — нет.",
+  doms:[["🧠 Память","Рабочая и кратковременная память — удерживать и обрабатывать больше за раз."],["🎯 Внимание","Концентрация, устойчивость и сопротивление отвлечениям."],["🧩 Логика","Рассуждение, планирование, гибкое решение задач."],["⚡ Скорость","Скорость обработки и реакции — думать и отвечать быстрее."]],
+  sci_h:"Честно про науку",
+  sci_yes:"Доказано: регулярная практика даёт чёткий измеримый прогресс в тренируемых навыках, а ряд парадигм (скорость обработки, рабочая память) показывает перенос на смежные реальные задачи.",
+  sci_no:"Не доказано: общие обещания «поумнеешь» или «+баллы IQ». Мы их не даём — за такой маркетинг FTC США оштрафовала Lumosity.",
+  sci_app:"Наш подход: валидированные задачи (Струп, N-back, CPT, SDMT, Башня Лондона…), без раздутых обещаний, и отслеживание твоего собственного прогресса.",
+  sci_src:"Источники: Jaeggi et al., 2008 (PNAS) — тренинг рабочей памяти; ACTIVE, Rebok et al., 2014 (JAMA Intern Med) — тренинг скорости, эффект 10+ лет; Sala & Gobet, 2017 (Educational Research Review).",
+  cta_dl:"Попробовать бесплатно",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Конфиденциальность"},
+ es:{name:"Español",nav_prog:"Programas",nav_ben:"Beneficios",nav_play:"Jugar",nav_dl:"Descargar",
+  b_title:"Qué entrena — y qué dice la ciencia",b_intro:"Cuatro dominios cognitivos, entrenados con tareas validadas de la ciencia cognitiva. Esta es la versión honesta de lo que sí y lo que no logra.",
+  doms:[["🧠 Memoria","Memoria de trabajo y a corto plazo — retener y manejar más información a la vez."],["🎯 Atención","Concentración, vigilancia sostenida y resistencia a la distracción."],["🧩 Lógica","Razonamiento, planificación y resolución flexible de problemas."],["⚡ Velocidad","Velocidad de procesamiento y reacción — pensar y responder más rápido."]],
+  sci_h:"Honestos con la ciencia",
+  sci_yes:"Probado: la práctica regular produce una mejora clara y medible en las habilidades entrenadas, y varios paradigmas (velocidad de procesamiento, memoria de trabajo) muestran transferencia a tareas reales relacionadas.",
+  sci_no:"No probado: promesas amplias como “serás más inteligente” o “+puntos de CI”. No las hacemos — ese marketing le costó a Lumosity una multa de la FTC de EE. UU.",
+  sci_app:"Nuestro enfoque: tareas validadas (Stroop, N-back, CPT, SDMT, Torre de Londres…), sin promesas infladas, y tu propio progreso medido en el tiempo.",
+  sci_src:"Fuentes: Jaeggi et al., 2008 (PNAS); ACTIVE, Rebok et al., 2014 (JAMA Intern Med) — efectos de 10+ años; Sala & Gobet, 2017 (Educational Research Review).",
+  cta_dl:"Pruébalo gratis",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Privacidad"},
+ de:{name:"Deutsch",nav_prog:"Programme",nav_ben:"Nutzen",nav_play:"Spielen",nav_dl:"Download",
+  b_title:"Was es trainiert — und was die Wissenschaft sagt",b_intro:"Vier kognitive Domänen, trainiert mit validierten Aufgaben aus der kognitiven Wissenschaft. Hier die ehrliche Version dessen, was es kann und was nicht.",
+  doms:[["🧠 Gedächtnis","Arbeits- und Kurzzeitgedächtnis — mehr Information gleichzeitig halten und verarbeiten."],["🎯 Aufmerksamkeit","Konzentration, Daueraufmerksamkeit und Widerstand gegen Ablenkung."],["🧩 Logik","Schlussfolgern, Planen und flexibles Problemlösen."],["⚡ Tempo","Verarbeitungsgeschwindigkeit und Reaktion — schneller denken und reagieren."]],
+  sci_h:"Ehrlich zur Wissenschaft",
+  sci_yes:"Belegt: regelmäßiges Üben bringt klare, messbare Verbesserung bei den trainierten Fähigkeiten, und mehrere Paradigmen (Verarbeitungstempo, Arbeitsgedächtnis) zeigen Transfer auf verwandte reale Aufgaben.",
+  sci_no:"Nicht belegt: pauschale Versprechen wie „du wirst klüger“ oder „+IQ“. Wir machen sie nicht — solches Marketing brachte Lumosity eine Strafe der US-FTC ein.",
+  sci_app:"Unser Ansatz: validierte Aufgaben (Stroop, N-back, CPT, SDMT, Turm von London…), keine übertriebenen Versprechen, und dein eigener Fortschritt über die Zeit.",
+  sci_src:"Quellen: Jaeggi et al., 2008 (PNAS); ACTIVE, Rebok et al., 2014 (JAMA Intern Med) — Effekte über 10+ Jahre; Sala & Gobet, 2017 (Educational Research Review).",
+  cta_dl:"Kostenlos testen",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Datenschutz"},
+ zh:{name:"中文",nav_prog:"课程",nav_ben:"益处",nav_play:"体验",nav_dl:"下载",
+  b_title:"训练什么——以及科学怎么说",b_intro:"四个认知领域，用认知科学中的验证任务来训练。这里是关于它能做什么、不能做什么的诚实说明。",
+  doms:[["🧠 记忆","工作记忆与短时记忆——一次保持并处理更多信息。"],["🎯 注意力","专注、持续警觉与抗干扰。"],["🧩 逻辑","推理、计划与灵活解决问题。"],["⚡ 速度","处理速度与反应——更快地思考与回应。"]],
+  sci_h:"对科学诚实",
+  sci_yes:"已证实：持续练习能在所训练的技能上带来明确、可测量的提升；若干范式（处理速度、工作记忆）显示可迁移到相关的真实任务。",
+  sci_no:"未证实：“变聪明”或“提高智商”这类宽泛承诺。我们不做——这类营销曾让 Lumosity 被美国 FTC 罚款。",
+  sci_app:"我们的做法：使用验证过的任务（Stroop、N-back、CPT、SDMT、伦敦塔……），不夸大承诺，并长期记录你自己的进步。",
+  sci_src:"来源：Jaeggi et al., 2008 (PNAS)；ACTIVE，Rebok et al., 2014 (JAMA Intern Med)——效果持续 10 年以上；Sala & Gobet, 2017 (Educational Research Review)。",
+  cta_dl:"免费试用",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"隐私"},
+ hi:{name:"हिन्दी",nav_prog:"प्रोग्राम",nav_ben:"लाभ",nav_play:"खेलें",nav_dl:"डाउनलोड",
+  b_title:"क्या ट्रेन करता है — और विज्ञान क्या कहता है",b_intro:"चार संज्ञानात्मक क्षेत्र, संज्ञानात्मक विज्ञान के मान्य कार्यों से प्रशिक्षित। यहाँ ईमानदार बात है कि यह क्या करता है और क्या नहीं।",
+  doms:[["🧠 याददाश्त","वर्किंग व अल्पकालिक स्मृति — एक साथ अधिक जानकारी रखना व संभालना।"],["🎯 ध्यान","एकाग्रता, निरंतर सतर्कता व विकर्षण के प्रति प्रतिरोध।"],["🧩 तर्क","तर्क, योजना व लचीला समस्या-समाधान।"],["⚡ गति","प्रसंस्करण गति व प्रतिक्रिया — तेज़ सोचना व उत्तर देना।"]],
+  sci_h:"विज्ञान के बारे में ईमानदारी",
+  sci_yes:"प्रमाणित: नियमित अभ्यास से प्रशिक्षित कौशलों में स्पष्ट, मापने-योग्य सुधार होता है; कई पैराडाइम (प्रसंस्करण गति, वर्किंग मेमोरी) संबंधित वास्तविक कार्यों में स्थानांतरण दिखाते हैं।",
+  sci_no:"अप्रमाणित: “होशियार बन जाओगे” या “+IQ” जैसे व्यापक दावे। हम नहीं करते — ऐसे मार्केटिंग पर US FTC ने Lumosity पर जुर्माना लगाया था।",
+  sci_app:"हमारा तरीका: मान्य कार्य (Stroop, N-back, CPT, SDMT, टॉवर ऑफ़ लंदन…), बिना बढ़ा-चढ़ाकर वादे, और समय के साथ आपकी अपनी प्रगति का ट्रैक।",
+  sci_src:"स्रोत: Jaeggi et al., 2008 (PNAS); ACTIVE, Rebok et al., 2014 (JAMA Intern Med) — 10+ वर्ष तक प्रभाव; Sala & Gobet, 2017 (Educational Research Review)।",
+  cta_dl:"मुफ़्त आज़माएँ",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"गोपनीयता"}
+};
+const ORDER=["en","ru","es","de","zh","hi"];
+function apply(l){
+ const d=I18N[l]||I18N.en;
+ document.documentElement.lang=l;
+ document.querySelectorAll("[data-i18n]").forEach(e=>{e.textContent=d[e.getAttribute("data-i18n")]||"";});
+ const dm=document.getElementById("doms");dm.innerHTML="";
+ (d.doms||[]).forEach(x=>{const el=document.createElement("div");el.className="dom";
+  el.innerHTML='<div class="n"></div><div class="d"></div>';
+  el.querySelector(".n").textContent=x[0];el.querySelector(".d").textContent=x[1];dm.appendChild(el);});
+ document.querySelectorAll("#langbar button").forEach(b=>b.classList.toggle("on",b.dataset.l===l));
+ try{localStorage.setItem("pg_lang",l);}catch(e){}
+}
+const bar=document.getElementById("langbar");
+ORDER.forEach(l=>{const b=document.createElement("button");b.textContent=I18N[l].name;b.dataset.l=l;b.onclick=()=>apply(l);bar.appendChild(b);});
+let init="en";try{const s=localStorage.getItem("pg_lang");if(s&&I18N[s])init=s;else{const n=(navigator.language||"en").slice(0,2);if(I18N[n])init=n;}}catch(e){}
+apply(init);
+</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PsyGames — Programs</title>
+<meta name="description" content="PsyGames programs: 9 cognitive training tracks for your goal — NZT-48, Reaction PRO, Students, 50+, Kids and more.">
+<style>
+  :root{--bg:#0f0e17;--card:#1a1925;--accent:#a855f7;--accent2:#fbbf24;--txt:#e8e6f0;--mut:#9b96b0;--line:#2a2838}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Noto Sans",sans-serif;line-height:1.55}
+  .wrap{max-width:980px;margin:0 auto;padding:18px 20px 60px}
+  nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+  nav a{color:var(--mut);text-decoration:none}
+  nav a.brand{color:var(--txt);font-weight:800;font-size:16px;margin-right:auto}
+  nav a:hover{color:var(--txt)}
+  .langbar{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}
+  .langbar button{background:var(--card);color:var(--mut);border:1px solid var(--line);border-radius:8px;padding:4px 10px;font-size:12.5px;cursor:pointer}
+  .langbar button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+  h1{font-size:30px;font-weight:800;margin:18px 0 6px;letter-spacing:-.5px}
+  .intro{color:var(--mut);font-size:15px;max-width:640px;margin-bottom:22px}
+  .progs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+  .prog{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .prog .top{display:flex;gap:10px;align-items:center;margin-bottom:8px}
+  .prog .e{font-size:26px}
+  .prog .n{font-weight:800;font-size:16px}
+  .prog .aud{color:var(--accent2);font-size:12px;margin-bottom:8px}
+  .prog .d{color:var(--mut);font-size:13.5px}
+  .prog .meta{color:var(--mut);font-size:12px;margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
+  .band{background:linear-gradient(135deg,#2a1a4a,#1a1925);border:1px solid var(--line);border-radius:16px;padding:26px;text-align:center;margin:36px 0}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;background:var(--accent);color:#fff;padding:13px 26px;border-radius:11px}
+  footer{text-align:center;color:var(--mut);font-size:12.5px;margin-top:36px;border-top:1px solid var(--line);padding-top:20px}
+  a.link{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="/">🧠 PsyGames</a>
+    <a href="/programs/" data-i18n="nav_prog"></a>
+    <a href="/benefits/" data-i18n="nav_ben"></a>
+    <a href="https://donosov999-ai.github.io/psygames-web/" data-i18n="nav_play"></a>
+    <a href="/download/" data-i18n="nav_dl"></a>
+  </nav>
+  <div class="langbar" id="langbar"></div>
+
+  <h1 data-i18n="p_title"></h1>
+  <p class="intro" data-i18n="p_intro"></p>
+  <div class="progs" id="progs"></div>
+
+  <div class="band">
+    <a class="btn" href="/download/" data-i18n="cta_dl"></a>
+  </div>
+
+  <footer><span data-i18n="foot"></span> · <a class="link" href="/privacy/" data-i18n="priv"></a></footer>
+</div>
+<script>
+const PE=["💊","⚡","💼","🎓","👴","🧒","🌸","📖","♟"];
+const I18N={
+ en:{name:"English",nav_prog:"Programs",nav_ben:"Benefits",nav_play:"Play",nav_dl:"Download",
+  p_title:"9 programs — one per goal",p_intro:"Each program is 9 trainers tuned to one audience and goal. Pick the one that fits you.",
+  inside:"9 trainers · free during beta",cta_dl:"Download & try free",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Privacy",
+  progs:[["NZT-48","Biohackers, serious training","Full prefrontal battery: working memory, attention, planning, inhibition, speed."],
+   ["Reaction PRO","Pilots · surgeons · dispatchers · drivers","Split-second decisions under stress: sustained attention, choice reaction, scanning."],
+   ["Entrepreneurs","Founders, executives","Decisions under pressure: risk (BART/Iowa), multitasking, planning, focus."],
+   ["Students PRO","SAT · GMAT · GRE · IELTS","Focus for marathon exams: fast math, reading-span, pattern, concentration."],
+   ["50+ Prevention","Active aging, 50–75+","Memory & processing speed to slow cognitive aging (gold-standard SDMT)."],
+   ["Kids 7–12","Parents, learning centers","Playful memory, counting, reaction — short 3–5 min sessions with rewards."],
+   ["Micro-Relax","Casual, breaks","The most addictive light games for a 5-minute break — match, find, sudoku."],
+   ["Speed Reading PRO","Reading courses, pros","Wider visual span, faster eyes, better retention of what you read."],
+   ["Chess","Players 1500+ ELO, coaches","Calculation, spatial vision, sustained attention over long games."]]},
+ ru:{name:"Русский",nav_prog:"Программы",nav_ben:"Польза",nav_play:"Играть",nav_dl:"Скачать",
+  p_title:"9 программ — под каждую цель",p_intro:"Каждая программа — 9 тренажёров под одну аудиторию и цель. Выбери свою.",
+  inside:"9 тренажёров · бесплатно на бете",cta_dl:"Скачать и попробовать",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Конфиденциальность",
+  progs:[["NZT-48","Биохакеры, серьёзный тренинг","Полная батарея префронталки: рабочая память, внимание, планирование, торможение, скорость."],
+   ["Реакция ПРО","Пилоты · хирурги · диспетчеры · водители","Решения за секунды под стрессом: длительное внимание, реакция выбора, сканирование."],
+   ["Предприниматели","Основатели, руководители","Решения под давлением: риск (BART/Iowa), многозадачность, планирование, фокус."],
+   ["Студенты PRO","ЕГЭ · GMAT · GRE · IELTS","Фокус на марафонских экзаменах: быстрый счёт, reading-span, паттерны, концентрация."],
+   ["50+ профилактика","Активное долголетие, 50–75+","Память и скорость обработки для замедления старения (золотой стандарт SDMT)."],
+   ["Дети 7–12","Родители, центры развития","Память, счёт, реакция в игре — короткие сессии 3–5 мин с наградами."],
+   ["Микро-релакс","Казуально, перерывы","Самые залипательные лёгкие игры на 5 минут — пары, поиск, судоку."],
+   ["Скорочтение PRO","Курсы чтения, профи","Шире поле зрения, быстрее глаза, лучше удержание прочитанного."],
+   ["Шахматист","Игроки 1500+ ELO, тренеры","Расчёт, пространственное зрение, концентрация на длинных партиях."]]},
+ es:{name:"Español",nav_prog:"Programas",nav_ben:"Beneficios",nav_play:"Jugar",nav_dl:"Descargar",
+  p_title:"9 programas — uno por objetivo",p_intro:"Cada programa son 9 entrenadores para un público y objetivo. Elige el tuyo.",
+  inside:"9 entrenadores · gratis en beta",cta_dl:"Descargar y probar",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Privacidad",
+  progs:[["NZT-48","Biohackers, entrenamiento serio","Batería prefrontal completa: memoria de trabajo, atención, planificación, inhibición, velocidad."],
+   ["Reaction PRO","Pilotos · cirujanos · controladores · conductores","Decisiones en un segundo bajo estrés: atención sostenida, reacción, escaneo."],
+   ["Emprendedores","Fundadores, directivos","Decisiones bajo presión: riesgo (BART/Iowa), multitarea, planificación, foco."],
+   ["Students PRO","SAT · GMAT · GRE · IELTS","Concentración para exámenes maratón: cálculo rápido, reading-span, patrones."],
+   ["50+ Prevención","Envejecimiento activo, 50–75+","Memoria y velocidad para frenar el envejecimiento cognitivo (SDMT)."],
+   ["Niños 7–12","Padres, centros educativos","Memoria, cálculo y reacción jugando — sesiones cortas de 3–5 min."],
+   ["Micro-Relax","Casual, pausas","Los juegos ligeros más adictivos para 5 minutos — parejas, buscar, sudoku."],
+   ["Speed Reading PRO","Cursos de lectura, profesionales","Mayor campo visual, ojos más rápidos, mejor retención."],
+   ["Ajedrez","Jugadores 1500+ ELO, entrenadores","Cálculo, visión espacial, atención en partidas largas."]]},
+ de:{name:"Deutsch",nav_prog:"Programme",nav_ben:"Nutzen",nav_play:"Spielen",nav_dl:"Download",
+  p_title:"9 Programme — eins pro Ziel",p_intro:"Jedes Programm sind 9 Trainer für eine Zielgruppe und ein Ziel. Wähle deins.",
+  inside:"9 Trainer · kostenlos in der Beta",cta_dl:"Herunterladen & testen",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Datenschutz",
+  progs:[["NZT-48","Biohacker, ernsthaftes Training","Volle präfrontale Batterie: Arbeitsgedächtnis, Aufmerksamkeit, Planung, Hemmung, Tempo."],
+   ["Reaction PRO","Piloten · Chirurgen · Lotsen · Fahrer","Sekundenentscheidungen unter Stress: Daueraufmerksamkeit, Reaktion, Scannen."],
+   ["Unternehmer","Gründer, Führungskräfte","Entscheidungen unter Druck: Risiko (BART/Iowa), Multitasking, Planung, Fokus."],
+   ["Students PRO","SAT · GMAT · GRE · IELTS","Fokus für Marathon-Prüfungen: schnelles Rechnen, Reading-Span, Muster."],
+   ["50+ Prävention","Aktives Altern, 50–75+","Gedächtnis & Tempo gegen kognitives Altern (Goldstandard SDMT)."],
+   ["Kinder 7–12","Eltern, Lernzentren","Gedächtnis, Rechnen, Reaktion im Spiel — kurze 3–5-Min-Einheiten."],
+   ["Micro-Relax","Locker, Pausen","Die fesselndsten leichten Spiele für 5 Minuten — Paare, Suchen, Sudoku."],
+   ["Speed Reading PRO","Lesekurse, Profis","Größeres Sichtfeld, schnellere Augen, bessere Behaltensleistung."],
+   ["Schach","Spieler 1500+ ELO, Trainer","Berechnung, räumliches Sehen, Konzentration über lange Partien."]]},
+ zh:{name:"中文",nav_prog:"课程",nav_ben:"益处",nav_play:"体验",nav_dl:"下载",
+  p_title:"9 套课程——各有目标",p_intro:"每套课程是针对一类人群和目标的 9 个训练。选你的那套。",
+  inside:"9 个训练 · 测试期免费",cta_dl:"下载并免费体验",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"隐私",
+  progs:[["NZT-48","биохакеры、认真训练","完整前额叶训练组：工作记忆、注意力、计划、抑制、速度。"],
+   ["Reaction PRO","飞行员·外科医生·调度员·驾驶员","压力下的秒级决策：持续注意、选择反应、扫视。"],
+   ["创业者","创始人、高管","压力下决策：风险（BART/Iowa）、多任务、计划、专注。"],
+   ["Students PRO","SAT·GMAT·GRE·IELTS","长时考试的专注力：快速计算、阅读广度、模式识别。"],
+   ["50+ 预防","活力衰老，50–75+","记忆与处理速度，延缓认知衰老（金标准 SDMT）。"],
+   ["儿童 7–12","家长、培训中心","趣味记忆、计算、反应——3–5 分钟短时段带奖励。"],
+   ["Micro-Relax","休闲、休息","5 分钟最易上瘾的轻松游戏——配对、找寻、数独。"],
+   ["Speed Reading PRO","阅读课程、专业人士","更宽视野、更快眼动、更好的阅读记忆。"],
+   ["国际象棋","1500+ ELO 棋手、教练","计算、空间视觉、长盘专注。"]]},
+ hi:{name:"हिन्दी",nav_prog:"प्रोग्राम",nav_ben:"लाभ",nav_play:"खेलें",nav_dl:"डाउनलोड",
+  p_title:"9 प्रोग्राम — हर लक्ष्य के लिए",p_intro:"हर प्रोग्राम एक दर्शक-वर्ग और लक्ष्य के लिए 9 ट्रेनर है। अपना चुनें।",
+  inside:"9 ट्रेनर · बीटा में मुफ़्त",cta_dl:"डाउनलोड कर मुफ़्त आज़माएँ",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"गोपनीयता",
+  progs:[["NZT-48","बायोहैकर, गंभीर प्रशिक्षण","पूर्ण प्रीफ्रंटल बैटरी: वर्किंग मेमोरी, ध्यान, योजना, निषेध, गति।"],
+   ["Reaction PRO","पायलट · सर्जन · डिस्पैचर · ड्राइवर","तनाव में पल भर के निर्णय: निरंतर ध्यान, प्रतिक्रिया, स्कैनिंग।"],
+   ["उद्यमी","फ़ाउंडर, अधिकारी","दबाव में निर्णय: जोखिम (BART/Iowa), मल्टीटास्किंग, योजना, फोकस।"],
+   ["Students PRO","SAT · GMAT · GRE · IELTS","लंबी परीक्षाओं के लिए फोकस: तेज़ गणित, रीडिंग-स्पैन, पैटर्न।"],
+   ["50+ रोकथाम","सक्रिय बुढ़ापा, 50–75+","याददाश्त व गति, संज्ञानात्मक बुढ़ापा धीमा (SDMT)।"],
+   ["बच्चे 7–12","माता-पिता, लर्निंग सेंटर","खेल में याददाश्त, गिनती, प्रतिक्रिया — 3–5 मिनट के सत्र।"],
+   ["Micro-Relax","कैज़ुअल, ब्रेक","5 मिनट के सबसे लती हल्के खेल — जोड़ी, खोज, सुडोकू।"],
+   ["Speed Reading PRO","पठन पाठ्यक्रम, पेशेवर","व्यापक दृष्टि, तेज़ आँखें, बेहतर अवधारण।"],
+   ["शतरंज","1500+ ELO खिलाड़ी, कोच","गणना, स्थानिक दृष्टि, लंबी बाज़ियों में एकाग्रता।"]]}
+};
+const ORDER=["en","ru","es","de","zh","hi"];
+function apply(l){
+ const d=I18N[l]||I18N.en;
+ document.documentElement.lang=l;
+ document.querySelectorAll("[data-i18n]").forEach(e=>{e.textContent=d[e.getAttribute("data-i18n")]||"";});
+ const pg=document.getElementById("progs");pg.innerHTML="";
+ (d.progs||[]).forEach((p,i)=>{const el=document.createElement("div");el.className="prog";
+  el.innerHTML='<div class="top"><span class="e">'+(PE[i]||"•")+'</span><span class="n"></span></div><div class="aud"></div><div class="d"></div><div class="meta"></div>';
+  el.querySelector(".n").textContent=p[0];el.querySelector(".aud").textContent=p[1];el.querySelector(".d").textContent=p[2];el.querySelector(".meta").textContent=d.inside;
+  pg.appendChild(el);});
+ document.querySelectorAll("#langbar button").forEach(b=>b.classList.toggle("on",b.dataset.l===l));
+ try{localStorage.setItem("pg_lang",l);}catch(e){}
+}
+const bar=document.getElementById("langbar");
+ORDER.forEach(l=>{const b=document.createElement("button");b.textContent=I18N[l].name;b.dataset.l=l;b.onclick=()=>apply(l);bar.appendChild(b);});
+let init="en";try{const s=localStorage.getItem("pg_lang");if(s&&I18N[s])init=s;else{const n=(navigator.language||"en").slice(0,2);if(I18N[n])init=n;}}catch(e){}
+apply(init);
+</script>
+</body>
+</html>
