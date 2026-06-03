@@ -30,19 +30,22 @@ echo "── 2/2 · Contabo (psy-games.pro) ──"
 if [ -f contabo.local.sh ]; then
   # shellcheck disable=SC1091
   source contabo.local.sh
-  # ГЕНТЛ-режим: 1 коннект (fail2ban-дружелюбно), без --parallel.
-  # Льём только статику сайта; служебное исключаем.
-  if lftp -u "$FTP_USER","$FTP_PASS" "$FTP_HOST" -e "
-        set ftp:ssl-allow no;
-        set net:timeout 20; set net:max-retries 2; set net:connection-limit 1;
-        mirror -R --no-perms --delete \
+  : "${REMOTE_DIR:=/home/psygames/web/psy-games.pro/public_html}"
+  # SFTP (порт 22) — FTP/21 забанен fail2ban. ГЕНТЛ: 1 коннект, без --parallel.
+  # БЕЗ --delete: на Contabo есть /play (приложение) и og-cover.png — их НЕ трогаем.
+  # Льём только маркетинг-статику; служебное + app-test/ + v2/ исключаем.
+  if lftp -u "$SSH_USER","$SSH_PASS" "sftp://$SSH_HOST" -e "
+        set sftp:auto-confirm yes;
+        set net:timeout 25; set net:max-retries 2; set net:connection-limit 1;
+        mirror -R --no-perms \
           --exclude '\.git/' --exclude 'deploy\.sh' --exclude 'contabo\.local\.sh' \
-          --exclude 'SYNC\.md' --exclude '\.gitignore' \
-          ./ /public_html/;
+          --exclude 'SYNC\.md' --exclude '\.gitignore' --exclude '\.DS_Store' \
+          --exclude 'app-test/' --exclude 'v2/' \
+          ./ $REMOTE_DIR/;
         bye"; then
-    echo "  ✓ Contabo: https://psy-games.pro/"
+    echo "  ✓ Contabo (SFTP): https://psy-games.pro/"
   else
-    echo "  ✗ Contabo не залился (FTP 530/таймаут? — нужен доступ/SFTP от Сергея)"
+    echo "  ✗ Contabo SFTP не залился (проверь SSH-креды/сеть)"
   fi
 else
   echo "  ⚠ нет contabo.local.sh — Contabo пропущен."
