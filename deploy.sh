@@ -38,7 +38,7 @@ if [ -f contabo.local.sh ]; then
         set sftp:auto-confirm yes;
         set net:timeout 25; set net:max-retries 2; set net:connection-limit 1;
         mirror -R --no-perms \
-          --exclude '\.git/' --exclude 'deploy\.sh' --exclude 'contabo\.local\.sh' \
+          --exclude '\.git/' --exclude 'deploy\.sh' --exclude 'deploy-downloads\.sh' --exclude 'contabo\.local\.sh' \
           --exclude 'SYNC\.md' --exclude '\.gitignore' --exclude '\.DS_Store' \
           --exclude 'app-test/' --exclude 'v2/' \
           ./ $REMOTE_DIR/;
