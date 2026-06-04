@@ -30,7 +30,8 @@
   .steps ol{margin-left:20px;color:var(--mut);font-size:14px}
   .steps li{margin:5px 0}
   code{background:#000;color:#7ee787;padding:2px 7px;border-radius:6px;font-size:13px;font-family:"SF Mono",Menlo,Consolas,monospace;user-select:all}
-  .note{background:#1a1925;border-left:3px solid var(--accent2);border-radius:8px;padding:11px 14px;margin-top:10px;font-size:13px;color:var(--mut)}
+  .note{background:#2a1f10;border-left:4px solid var(--accent2);border-radius:8px;padding:14px 16px;margin-top:12px;font-size:14px;color:#f0d890;font-weight:500}
+  code{word-break:break-all}
   footer{text-align:center;color:var(--mut);font-size:12.5px;margin-top:46px;border-top:1px solid var(--line);padding-top:22px}
   a.link{color:var(--accent)}
 </style>
@@ -88,7 +89,7 @@ const I18N = {
     meta_mac:"Apple Silicon (M1–M4) · .tar.gz · ~6.3 MB",meta_win:"Windows 10/11 · x64 · .exe installer · ~4.5 MB",meta_apk:"Android 7+ · APK (sideload) · ~32 MB",
     dl_mac:"Download for macOS",dl_win:"Download for Windows",dl_apk:"Download APK",
     h_mac:"🍎 Install on macOS",h_win:"🪟 Install on Windows",h_apk:"🤖 Install on Android",
-    steps_mac:["Unpack the downloaded <b>.tar.gz</b> (double-click).","Move <b>PsyGames.app</b> to Applications.","Open Terminal and run: <code>xattr -cr /Applications/PsyGames.app</code>","Launch the app."],
+    steps_mac:["Unpack the downloaded <b>.tar.gz</b> (double-click).","Move <b>PsyGames.app</b> to Applications.","Open Terminal and run: <code>xattr -cr ~/Downloads/PsyGames*.app /Applications/PsyGames.app 2&gt;/dev/null</code>","Launch the app."],
     steps_win:["Run the downloaded <code>PsyGames-windows-setup.exe</code>.","If SmartScreen warns — click “More info” → “Run anyway”.","Finish the installer. The app auto-updates on new releases."],
     steps_apk:["Download <code>PsyGames-android.apk</code>.","Allow “Install from unknown sources” for your browser / file manager.","Open the APK → “Install”."],
     note_mac:"The command is needed because the app is not yet Apple-signed. On macOS Sonoma/Sequoia it otherwise shows “damaged” — it is not a virus, just a missing signature.",
@@ -99,7 +100,7 @@ const I18N = {
     meta_mac:"Apple Silicon (M1–M4) · .tar.gz · ~6.3 МБ",meta_win:"Windows 10/11 · x64 · установщик .exe · ~4.5 МБ",meta_apk:"Android 7+ · APK (sideload) · ~32 МБ",
     dl_mac:"Скачать для macOS",dl_win:"Скачать для Windows",dl_apk:"Скачать APK",
     h_mac:"🍎 Установка на macOS",h_win:"🪟 Установка на Windows",h_apk:"🤖 Установка на Android",
-    steps_mac:["Распакуй скачанный <b>.tar.gz</b> (двойной клик).","Перетащи <b>PsyGames.app</b> в «Программы».","Открой Терминал и выполни: <code>xattr -cr /Applications/PsyGames.app</code>","Запусти приложение."],
+    steps_mac:["Распакуй скачанный <b>.tar.gz</b> (двойной клик).","Перетащи <b>PsyGames.app</b> в «Программы».","Открой Терминал и выполни: <code>xattr -cr ~/Downloads/PsyGames*.app /Applications/PsyGames.app 2&gt;/dev/null</code>","Запусти приложение."],
     steps_win:["Запусти скачанный <code>PsyGames-windows-setup.exe</code>.","Если ругается SmartScreen — «Подробнее» → «Выполнить в любом случае».","Пройди установщик. Приложение само обновляется при новых версиях."],
     steps_apk:["Скачай <code>PsyGames-android.apk</code>.","Разреши «Установка из неизвестных источников» для браузера / файлового менеджера.","Открой APK → «Установить»."],
     note_mac:"Команда нужна, потому что приложение пока без подписи Apple. На macOS Sonoma/Sequoia иначе пишет «повреждено» — это не вирус, а отсутствие подписи.",
@@ -110,7 +111,7 @@ const I18N = {
     meta_mac:"Apple Silicon (M1–M4) · .tar.gz · ~6.3 MB",meta_win:"Windows 10/11 · x64 · instalador .exe · ~4.5 MB",meta_apk:"Android 7+ · APK (sideload) · ~32 MB",
     dl_mac:"Descargar para macOS",dl_win:"Descargar para Windows",dl_apk:"Descargar APK",
     h_mac:"🍎 Instalar en macOS",h_win:"🪟 Instalar en Windows",h_apk:"🤖 Instalar en Android",
-    steps_mac:["Descomprime el <b>.tar.gz</b> descargado (doble clic).","Mueve <b>PsyGames.app</b> a Aplicaciones.","Abre la Terminal y ejecuta: <code>xattr -cr /Applications/PsyGames.app</code>","Abre la aplicación."],
+    steps_mac:["Descomprime el <b>.tar.gz</b> descargado (doble clic).","Mueve <b>PsyGames.app</b> a Aplicaciones.","Abre la Terminal y ejecuta: <code>xattr -cr ~/Downloads/PsyGames*.app /Applications/PsyGames.app 2&gt;/dev/null</code>","Abre la aplicación."],
     steps_win:["Ejecuta el <code>PsyGames-windows-setup.exe</code> descargado.","Si SmartScreen advierte — pulsa “Más información” → “Ejecutar de todas formas”.","Completa el instalador. La app se actualiza sola con nuevas versiones."],
     steps_apk:["Descarga <code>PsyGames-android.apk</code>.","Permite “Instalar de fuentes desconocidas” para tu navegador / gestor de archivos.","Abre el APK → “Instalar”."],
     note_mac:"El comando es necesario porque la app aún no está firmada por Apple. En macOS Sonoma/Sequoia muestra “dañada” — no es un virus, solo falta la firma.",
@@ -121,7 +122,7 @@ const I18N = {
     meta_mac:"Apple Silicon (M1–M4) · .tar.gz · ~6,3 MB",meta_win:"Windows 10/11 · x64 · .exe-Installer · ~4,5 MB",meta_apk:"Android 7+ · APK (Sideload) · ~32 MB",
     dl_mac:"Für macOS herunterladen",dl_win:"Für Windows herunterladen",dl_apk:"APK herunterladen",
     h_mac:"🍎 Installation unter macOS",h_win:"🪟 Installation unter Windows",h_apk:"🤖 Installation unter Android",
-    steps_mac:["Entpacke die heruntergeladene <b>.tar.gz</b> (Doppelklick).","Verschiebe <b>PsyGames.app</b> in „Programme“.","Öffne das Terminal und führe aus: <code>xattr -cr /Applications/PsyGames.app</code>","Starte die App."],
+    steps_mac:["Entpacke die heruntergeladene <b>.tar.gz</b> (Doppelklick).","Verschiebe <b>PsyGames.app</b> in „Programme“.","Öffne das Terminal und führe aus: <code>xattr -cr ~/Downloads/PsyGames*.app /Applications/PsyGames.app 2&gt;/dev/null</code>","Starte die App."],
     steps_win:["Starte die heruntergeladene <code>PsyGames-windows-setup.exe</code>.","Wenn SmartScreen warnt — „Weitere Informationen“ → „Trotzdem ausführen“.","Schließe den Installer ab. Die App aktualisiert sich bei neuen Versionen selbst."],
     steps_apk:["Lade <code>PsyGames-android.apk</code> herunter.","Erlaube „Installation aus unbekannten Quellen“ für deinen Browser / Dateimanager.","Öffne die APK → „Installieren“."],
     note_mac:"Der Befehl ist nötig, weil die App noch nicht von Apple signiert ist. Unter macOS Sonoma/Sequoia erscheint sonst „beschädigt“ — kein Virus, nur fehlende Signatur.",
@@ -132,7 +133,7 @@ const I18N = {
     meta_mac:"Apple Silicon (M1–M4) · .tar.gz · 约 6.3 MB",meta_win:"Windows 10/11 · x64 · .exe 安装包 · 约 4.5 MB",meta_apk:"Android 7+ · APK（侧载）· 约 32 MB",
     dl_mac:"下载 macOS 版",dl_win:"下载 Windows 版",dl_apk:"下载 APK",
     h_mac:"🍎 在 macOS 上安装",h_win:"🪟 在 Windows 上安装",h_apk:"🤖 在 Android 上安装",
-    steps_mac:["解压下载的 <b>.tar.gz</b>（双击）。","将 <b>PsyGames.app</b> 移到「应用程序」。","打开「终端」并运行：<code>xattr -cr /Applications/PsyGames.app</code>","启动应用。"],
+    steps_mac:["解压下载的 <b>.tar.gz</b>（双击）。","将 <b>PsyGames.app</b> 移到「应用程序」。","打开「终端」并运行：<code>xattr -cr ~/Downloads/PsyGames*.app /Applications/PsyGames.app 2&gt;/dev/null</code>","启动应用。"],
     steps_win:["运行下载的 <code>PsyGames-windows-setup.exe</code>。","若 SmartScreen 提示——点击「更多信息」→「仍要运行」。","完成安装。新版本发布时应用会自动更新。"],
     steps_apk:["下载 <code>PsyGames-android.apk</code>。","为浏览器 / 文件管理器允许「安装未知来源应用」。","打开 APK →「安装」。"],
     note_mac:"该命令是必要的，因为应用尚未经过 Apple 签名。否则在 macOS Sonoma/Sequoia 上会显示「已损坏」——这不是病毒，只是缺少签名。",
@@ -143,7 +144,7 @@ const I18N = {
     meta_mac:"Apple Silicon (M1–M4) · .tar.gz · ~6.3 MB",meta_win:"Windows 10/11 · x64 · .exe इंस्टॉलर · ~4.5 MB",meta_apk:"Android 7+ · APK (साइडलोड) · ~32 MB",
     dl_mac:"macOS के लिए डाउनलोड करें",dl_win:"Windows के लिए डाउनलोड करें",dl_apk:"APK डाउनलोड करें",
     h_mac:"🍎 macOS पर इंस्टॉल करें",h_win:"🪟 Windows पर इंस्टॉल करें",h_apk:"🤖 Android पर इंस्टॉल करें",
-    steps_mac:["डाउनलोड की गई <b>.tar.gz</b> को अनपैक करें (डबल-क्लिक)।","<b>PsyGames.app</b> को Applications में ले जाएँ।","Terminal खोलें और चलाएँ: <code>xattr -cr /Applications/PsyGames.app</code>","ऐप खोलें।"],
+    steps_mac:["डाउनलोड की गई <b>.tar.gz</b> को अनपैक करें (डबल-क्लिक)।","<b>PsyGames.app</b> को Applications में ले जाएँ।","Terminal खोलें और चलाएँ: <code>xattr -cr ~/Downloads/PsyGames*.app /Applications/PsyGames.app 2&gt;/dev/null</code>","ऐप खोलें।"],
     steps_win:["डाउनलोड किया <code>PsyGames-windows-setup.exe</code> चलाएँ।","अगर SmartScreen चेतावनी दे — “More info” → “Run anyway” दबाएँ।","इंस्टॉलर पूरा करें। नए वर्शन आने पर ऐप खुद अपडेट होता है।"],
     steps_apk:["<code>PsyGames-android.apk</code> डाउनलोड करें।","अपने ब्राउज़र / फ़ाइल मैनेजर के लिए “अज्ञात स्रोतों से इंस्टॉल” की अनुमति दें।","APK खोलें → “Install”।"],
     note_mac:"यह कमांड ज़रूरी है क्योंकि ऐप अभी Apple-साइन्ड नहीं है। वरना macOS Sonoma/Sequoia पर “damaged” दिखता है — यह वायरस नहीं, सिर्फ़ साइन की कमी है।",
