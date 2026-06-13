@@ -23,8 +23,10 @@
   .wrap{max-width:860px;margin:0 auto;padding:26px 20px 60px}
   h1{font-size:30px;font-weight:800;margin:6px 0 6px;letter-spacing:-.5px}
   .intro{color:var(--mut);font-size:15px;margin-bottom:24px;max-width:680px}
-  .doms{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:30px}
-  .dom{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;transition:.15s}
+  .doms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-bottom:30px}
+  .dom{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;transition:.15s}
+  /* apple-skin.css задаёт .dom{border-radius:999px} для чипов главной — на этой странице .dom это карточки, возвращаем прямоугольник (выше специфичность + important) */
+  .doms .dom{border-radius:18px!important}
   .dom:hover{border-color:var(--accent);background:var(--card2)}
   .dom .n{font-weight:700;font-size:16px;margin-bottom:4px}
   .dom .d{color:var(--mut);font-size:13.5px;line-height:1.5}
