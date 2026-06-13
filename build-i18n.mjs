@@ -70,6 +70,9 @@ for (const page of PAGES) {
       console.error(`apply(${lang}) на ${page||'index'}:`, e.message);
     }
     doc.documentElement.setAttribute('lang', lang);
+    // select#lang: jsdom уже наполнил опции через ORDER.forEach; клиентский JS наполнит
+    // ПОВТОРНО → дубль (×14). Очищаем — клиент заполнит один раз.
+    const langSel = doc.getElementById('lang'); if (langSel) langSel.innerHTML = '';
 
     // ── патч <head> ──
     const head = doc.querySelector('head');
