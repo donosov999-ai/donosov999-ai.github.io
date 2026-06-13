@@ -95,6 +95,9 @@ for (const page of PAGES) {
     // ── сериализация + постобработка ссылок ──
     let out = '<!DOCTYPE html>\n' + doc.documentElement.outerHTML;
     out = localizeLinks(out, lang);
+    // карусель: для не-en страниц — языковые скриншоты /screens/<lang>/X.png
+    // (chrome игр локализован: заголовки/лейблы/кнопки). en остаётся в /screens/.
+    if (lang !== 'en') out = out.replace(/\/screens\//g, `/screens/${lang}/`);
     // КРИТИЧНО: родной скрипт вызывает apply(init), где init=navigator.language → у
     // Googlebot (navigator=en, без localStorage) ЭТО ПЕРЕРЕНДЕРИТ /ru/ обратно в EN.
     // Форсим язык страницы при клиентском рендере, чтобы статический язык не перебивался.
