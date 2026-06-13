@@ -73,6 +73,7 @@
   .shot{flex:0 0 auto;scroll-snap-align:center;width:228px;text-align:center}
   .phone{width:228px;height:464px;background:#000;border-radius:34px;padding:9px;position:relative;box-shadow:0 20px 50px -12px rgba(0,0,0,.85),inset 0 0 0 1px rgba(255,255,255,.09)}
   .phone::before{content:"";position:absolute;top:15px;left:50%;transform:translateX(-50%);width:52px;height:5px;background:#1b1b22;border-radius:3px;z-index:2}
+  .phone img{width:100%;height:100%;object-fit:cover;border-radius:26px;display:block}
   .screen{width:100%;height:100%;background:#0f0e17;border-radius:26px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px 16px}
   .scr-h{font-size:11px;color:var(--mut);letter-spacing:.04em;text-transform:uppercase;align-self:flex-start}
   .shot-cap{margin-top:12px;font-size:12.5px;color:var(--mut)}
@@ -173,60 +174,12 @@
     <div class="shotswrap">
       <button class="shots-arrow l" aria-label="prev" onclick="document.getElementById('shots').scrollBy({left:-246,behavior:'smooth'})">‹</button>
       <div class="shots" id="shots">
-        <!-- Schulte -->
-        <div class="shot"><div class="phone"><div class="screen">
-          <div class="scr-h">▢ 1 → 25</div>
-          <div class="mkgrid g5">
-            <div class="mkc">15</div><div class="mkc">3</div><div class="mkc on">1</div><div class="mkc">19</div><div class="mkc">8</div>
-            <div class="mkc">22</div><div class="mkc">11</div><div class="mkc">6</div><div class="mkc">17</div><div class="mkc">2</div>
-            <div class="mkc">9</div><div class="mkc">24</div><div class="mkc">13</div><div class="mkc">5</div><div class="mkc">20</div>
-            <div class="mkc">7</div><div class="mkc">18</div><div class="mkc">4</div><div class="mkc">23</div><div class="mkc">12</div>
-            <div class="mkc">16</div><div class="mkc">10</div><div class="mkc">21</div><div class="mkc">14</div><div class="mkc">25</div>
-          </div>
-        </div></div><div class="shot-cap"><b>Schulte</b>Attention · visual span</div></div>
-        <!-- Memory Matrix -->
-        <div class="shot"><div class="phone"><div class="screen">
-          <div class="scr-h">▦ Memorize</div>
-          <div class="mkgrid g4">
-            <div class="mkc"></div><div class="mkc on"></div><div class="mkc"></div><div class="mkc"></div>
-            <div class="mkc on"></div><div class="mkc"></div><div class="mkc"></div><div class="mkc on"></div>
-            <div class="mkc"></div><div class="mkc"></div><div class="mkc on"></div><div class="mkc"></div>
-            <div class="mkc"></div><div class="mkc on"></div><div class="mkc"></div><div class="mkc"></div>
-          </div>
-        </div></div><div class="shot-cap"><b>Memory Matrix</b>Visual memory</div></div>
-        <!-- Stroop -->
-        <div class="shot"><div class="phone"><div class="screen">
-          <div class="scr-h">Tap the ink color</div>
-          <div class="mkbig" style="color:#ef4444">BLUE</div>
-          <div class="mkrow" style="margin-top:8px">
-            <span class="mkbtn" style="background:#ef4444">RED</span>
-            <span class="mkbtn" style="background:#3b82f6">BLUE</span>
-          </div>
-          <div class="mkrow">
-            <span class="mkbtn" style="background:#22c55e">GREEN</span>
-            <span class="mkbtn" style="background:#eab308">YELLOW</span>
-          </div>
-        </div></div><div class="shot-cap"><b>Stroop</b>Inhibition</div></div>
-        <!-- N-back -->
-        <div class="shot"><div class="phone"><div class="screen">
-          <div class="scr-h">N-back · N=2</div>
-          <div class="mkgrid g3">
-            <div class="mkc"></div><div class="mkc"></div><div class="mkc"></div>
-            <div class="mkc"></div><div class="mkc on"></div><div class="mkc"></div>
-            <div class="mkc"></div><div class="mkc"></div><div class="mkc"></div>
-          </div>
-          <span class="mkbtn" style="background:var(--accent);margin-top:6px">MATCH</span>
-        </div></div><div class="shot-cap"><b>Dual N-back</b>Working memory</div></div>
-        <!-- Math Sprint -->
-        <div class="shot"><div class="phone"><div class="screen">
-          <div class="scr-h">Math Sprint · 0:42</div>
-          <div class="mkbig">7 + 8 = ?</div>
-          <div class="mkrow" style="margin-top:10px">
-            <span class="mkc" style="width:54px;height:48px">13</span>
-            <span class="mkc ok" style="width:54px;height:48px">15</span>
-            <span class="mkc" style="width:54px;height:48px">16</span>
-          </div>
-        </div></div><div class="shot-cap"><b>Math Sprint</b>Processing speed</div></div>
+        <div class="shot"><div class="phone"><img src="/screens/schulte.png" alt="Schulte" loading="lazy"></div><div class="shot-cap"><b>Schulte</b>Attention</div></div>
+        <div class="shot"><div class="phone"><img src="/screens/picturepairs.png" alt="Picture Pairs" loading="lazy"></div><div class="shot-cap"><b>Picture Pairs</b>Memory</div></div>
+        <div class="shot"><div class="phone"><img src="/screens/sudoku.png" alt="Sudoku" loading="lazy"></div><div class="shot-cap"><b>Sudoku</b>Logic</div></div>
+        <div class="shot"><div class="phone"><img src="/screens/stroop.png" alt="Stroop" loading="lazy"></div><div class="shot-cap"><b>Stroop</b>Inhibition</div></div>
+        <div class="shot"><div class="phone"><img src="/screens/mathsprint.png" alt="Math Sprint" loading="lazy"></div><div class="shot-cap"><b>Math Sprint</b>Speed</div></div>
+        <div class="shot"><div class="phone"><img src="/screens/anagrams.png" alt="Anagrams" loading="lazy"></div><div class="shot-cap"><b>Anagrams</b>Verbal</div></div>
       </div>
       <button class="shots-arrow r" aria-label="next" onclick="document.getElementById('shots').scrollBy({left:246,behavior:'smooth'})">›</button>
     </div>
