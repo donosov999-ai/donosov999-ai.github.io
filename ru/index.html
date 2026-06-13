@@ -92,6 +92,25 @@
   .shots-arrow:hover{background:var(--accent);border-color:var(--accent)}
   .shots-arrow.l{left:-8px}.shots-arrow.r{right:-8px}
   @media(min-width:780px){.shots-arrow{display:flex}}
+  /* ── платформа-детект хинт под CTA ── */
+  .oshint{margin-top:14px;font-size:13px;color:var(--mut);min-height:18px}
+  .oshint a{color:var(--accent);text-decoration:none;font-weight:600}
+  /* ── мобильный sticky CTA-бар ── */
+  .mbar{display:none}
+  @media(max-width:620px){
+    .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:8px;padding:8px 10px;background:rgba(8,8,11,.93);backdrop-filter:saturate(160%) blur(14px);border-top:1px solid var(--line)}
+    .mbar a{flex:1;text-align:center;padding:13px;border-radius:11px;font-weight:700;font-size:14px;text-decoration:none}
+    .mbar .pl{background:var(--accent);color:#fff}
+    .mbar .dl2{background:var(--surface);color:var(--txt);border:1px solid var(--line)}
+    body{padding-bottom:66px}
+  }
+  /* ── exit-intent оверлей ── */
+  .exov{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.62);backdrop-filter:blur(5px);display:none;align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity .25s}
+  .exov.show{display:flex;opacity:1}
+  .exbx{position:relative;background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:34px 28px;max-width:380px;text-align:center;box-shadow:0 30px 80px -20px rgba(0,0,0,.8)}
+  .exbx h3{font-size:22px;font-weight:800;margin-bottom:10px;letter-spacing:-.02em}
+  .exbx p{color:var(--mut);font-size:14.5px;margin-bottom:22px;line-height:1.55}
+  .exbx .x{position:absolute;top:14px;right:18px;color:var(--mut);font-size:26px;cursor:pointer;background:none;border:none;line-height:1}
 </style>
 <meta property="og:type" content="website"><meta property="og:site_name" content="PsyGames"><meta property="og:title" content="PsyGames — Cognitive Training"><meta property="og:description" content="48 science-based cognitive trainers — memory, attention, logic and speed. Mac, Windows, Android."><meta property="og:image" content="https://psy-games.pro/og-cover.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="PsyGames — Cognitive Training"><meta name="twitter:image" content="https://psy-games.pro/og-cover.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"PsyGames","applicationCategory":"GameApplication","operatingSystem":"macOS, Windows, Android","description":"48 science-based cognitive trainers — memory, attention, logic and speed. Mac, Windows, Android.","url":"https://psy-games.pro/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 
@@ -136,6 +155,7 @@
       <a class="btn p" href="https://donosov999-ai.github.io/psygames-web/" data-i18n="cta_play">Играть в браузере</a>
       <a class="btn s" href="/ru/download/" data-i18n="cta_dl">Скачать</a>
     </div>
+    <p class="oshint" id="oshint"></p>
     <div class="pills" id="pills"><span class="pill"><b>48</b><span>тренажёров</span></span><span class="pill"><b>0 рекламы</b><span>никогда</span></span><span class="pill"><b>Бесплатно</b><span>на бете</span></span><span class="pill"><b>Офлайн</b><span>Mac · Win · Android</span></span></div>
     <div class="badge" data-i18n="ver">v2 · тест Apple-стиля</div>
   </header>
@@ -227,6 +247,19 @@
 </div>
 <footer><span data-i18n="foot">© 2026 PsyGames · Denis Onosov (ODV999)</span> · <a href="/ru/privacy/" data-i18n="priv">Конфиденциальность</a></footer>
 
+<!-- мобильный sticky CTA-бар -->
+<div class="mbar">
+  <a class="pl" href="https://donosov999-ai.github.io/psygames-web/" data-i18n="cta_play">Играть в браузере</a>
+  <a class="dl2" href="/ru/download/" data-i18n="cta_dl">Скачать</a>
+</div>
+<!-- exit-intent оверлей -->
+<div class="exov" id="exov"><div class="exbx">
+  <button class="x" id="exx" aria-label="close">×</button>
+  <h3 data-i18n="exit_h">Попробуй без установки</h3>
+  <p data-i18n="exit_p">Играй в PsyGames прямо в браузере — скачивать не нужно.</p>
+  <a class="btn p" href="https://donosov999-ai.github.io/psygames-web/" data-i18n="cta_play">Играть в браузере</a>
+</div></div>
+
 <script>
 const I={
  brain:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"/><circle cx="5" cy="6.5" r="1.4"/><circle cx="19" cy="6.5" r="1.4"/><circle cx="5.5" cy="17.5" r="1.4"/><circle cx="18.5" cy="17.5" r="1.4"/><path d="M9.8 10.8 6.2 7.7M14.2 10.8l3.5-3M9.9 13.4l-3.6 3.1M14.1 13.4l3.5 3.1"/></svg>',
@@ -246,7 +279,7 @@ const I18N={
   hooks:[["flask","Real science","Built on validated research — not gimmicks. Stroop, N-back, Corsi, WCST and more, faithful to the original protocols."],["target2","Your goal","9 programs — pick the one that fits you, from biohackers to kids to chess players."],["device","Everywhere","Mac, Windows, Android. Works fully offline — your data stays on your device."]],
   h_prog:"9 programs — one per goal",h_prog_sub:"Each program is 9 trainers tuned to an audience.",
   progs:[["NZT-48","Biohackers","Full prefrontal battery"],["Reaction PRO","Pilots · surgeons · drivers","Split-second decisions under stress"],["Entrepreneurs","Founders · execs","Decisions under pressure, risk, focus"],["Students PRO","SAT · GMAT · GRE","Focus for long exams"],["50+ Prevention","Active aging","Memory & speed, slow aging"],["Kids 7–12","Parents","Playful memory, counting, reaction"],["Micro-Relax","Casual","Light brain games for breaks"],["Speed Reading","Pros","Wider visual span, faster reading"],["Chess","1500+ ELO","Calculation, spatial, focus"]],
-  h_shots:"See it in action",h_ben:"What it trains",doms:[["brain","Memory"],["target","Attention"],["puzzle","Logic"],["bolt","Speed"]],
+  h_shots:"See it in action",exit_h:"Try without installing",exit_p:"Play PsyGames right in your browser — no download needed.",h_ben:"What it trains",doms:[["brain","Memory"],["target","Attention"],["puzzle","Logic"],["bolt","Speed"]],
   sci:"Honest: cognitive training gives measurable gains on the trained skills. We don't promise “+IQ” — that's unproven. Backed by real studies (Jaeggi 2008, PNAS; ACTIVE/Rebok 2014, JAMA).",
   band_h:"Free during beta — try it now",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Privacy"},
  ru:{name:"Русский",ver:"v2 · тест Apple-стиля",nav_prog:"Программы",nav_games:"Игры",nav_ben:"Польза",nav_about:"О проекте",nav_dl:"Скачать",
@@ -257,7 +290,7 @@ const I18N={
   hooks:[["flask","Реальная наука","На валидированных исследованиях, без пустышек. Stroop, N-back, Корси, WCST и другие — точно по оригинальным методикам."],["target2","Твоя цель","9 программ — выбери свою: от биохакеров до детей и шахматистов."],["device","Везде","Mac, Windows, Android. Работает полностью офлайн — данные остаются на устройстве."]],
   h_prog:"9 программ — под каждую цель",h_prog_sub:"Каждая программа — 9 тренажёров под аудиторию.",
   progs:[["NZT-48","Биохакеры","Полная батарея префронталки"],["Реакция ПРО","Пилоты · хирурги · водители","Решения за секунды под стрессом"],["Предприниматели","Основатели · топы","Решения под давлением, риск, фокус"],["Студенты PRO","ЕГЭ · GMAT · GRE","Фокус на длинных экзаменах"],["50+ профилактика","Долголетие","Память и скорость, замедление старения"],["Дети 7–12","Родители","Память, счёт, реакция в игре"],["Микро-релакс","Казуально","Лёгкие игры для перерыва"],["Скорочтение","Профи","Шире поле зрения, быстрее чтение"],["Шахматист","1500+ ELO","Расчёт, пространство, концентрация"]],
-  h_shots:"Как это выглядит",h_ben:"Что тренирует",doms:[["brain","Память"],["target","Внимание"],["puzzle","Логика"],["bolt","Скорость"]],
+  h_shots:"Как это выглядит",exit_h:"Попробуй без установки",exit_p:"Играй в PsyGames прямо в браузере — скачивать не нужно.",h_ben:"Что тренирует",doms:[["brain","Память"],["target","Внимание"],["puzzle","Логика"],["bolt","Скорость"]],
   sci:"Честно: тренинг даёт измеримый прогресс в тренируемых навыках. «+IQ» не обещаем — не доказано. Опираемся на реальные исследования (Jaeggi 2008, PNAS; ACTIVE/Rebok 2014, JAMA).",
   band_h:"Бесплатно на бете — попробуй",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Конфиденциальность"},
  es:{name:"Español",ver:"v2 · prueba estilo Apple",nav_prog:"Programas",nav_games:"Juegos",nav_ben:"Beneficios",nav_about:"Acerca de",nav_dl:"Descargar",
@@ -268,7 +301,7 @@ const I18N={
   hooks:[["flask","Ciencia real","Basado en investigación validada, sin trucos. Stroop, N-back, Corsi, WCST y más, fieles a los protocolos originales."],["target2","Tu objetivo","9 programas — elige el tuyo: de biohackers a niños y ajedrecistas."],["device","En todas partes","Mac, Windows, Android. Funciona sin conexión — tus datos se quedan en tu dispositivo."]],
   h_prog:"9 programas — uno por objetivo",h_prog_sub:"Cada programa son 9 entrenadores para un público.",
   progs:[["NZT-48","Biohackers","Batería prefrontal completa"],["Reaction PRO","Pilotos · cirujanos","Decisiones en un segundo"],["Emprendedores","Fundadores","Decisiones bajo presión, riesgo, foco"],["Students PRO","SAT · GMAT · GRE","Concentración en exámenes largos"],["50+ Prevención","Envejecer activo","Memoria y velocidad"],["Niños 7–12","Padres","Memoria, cálculo, reacción"],["Micro-Relax","Casual","Juegos ligeros para pausas"],["Lectura veloz","Profesionales","Mayor campo visual, leer más rápido"],["Ajedrez","1500+ ELO","Cálculo, espacial, concentración"]],
-  h_shots:"Míralo en acción",h_ben:"Qué entrena",doms:[["brain","Memoria"],["target","Atención"],["puzzle","Lógica"],["bolt","Velocidad"]],
+  h_shots:"Míralo en acción",exit_h:"Pruébalo sin instalar",exit_p:"Juega a PsyGames directo en el navegador — sin descargas.",h_ben:"Qué entrena",doms:[["brain","Memoria"],["target","Atención"],["puzzle","Lógica"],["bolt","Velocidad"]],
   sci:"Honesto: el entrenamiento mejora las habilidades entrenadas de forma medible. No prometemos “+CI” — no está probado. Basado en estudios reales (Jaeggi 2008; ACTIVE/Rebok 2014).",
   band_h:"Gratis en beta — pruébalo",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Privacidad"},
  pt:{name:"Português",ver:"v2 · teste estilo Apple",nav_prog:"Programas",nav_games:"Jogos",nav_ben:"Benefícios",nav_about:"Sobre",nav_dl:"Baixar",
@@ -279,7 +312,7 @@ const I18N={
   hooks:[["flask","Ciência de verdade","Baseado em pesquisa validada, sem truques. Stroop, N-back, Corsi, WCST e mais, fiéis aos protocolos originais."],["target2","Seu objetivo","9 programas — escolha o seu: de biohackers a crianças e enxadristas."],["device","Em todo lugar","Mac, Windows, Android. Funciona totalmente offline — seus dados ficam no seu aparelho."]],
   h_prog:"9 programas — um por objetivo",h_prog_sub:"Cada programa são 9 treinadores ajustados a um público.",
   progs:[["NZT-48","Biohackers","Bateria pré-frontal completa"],["Reaction PRO","Pilotos · cirurgiões · motoristas","Decisões em frações de segundo sob estresse"],["Empreendedores","Fundadores · executivos","Decisões sob pressão, risco, foco"],["Students PRO","SAT · GMAT · GRE","Foco para provas longas"],["50+ Prevenção","Envelhecer ativo","Memória e velocidade, retardar o envelhecimento"],["Crianças 7–12","Pais","Memória, contagem e reação de forma lúdica"],["Micro-Relax","Casual","Jogos leves para as pausas"],["Leitura veloz","Profissionais","Campo visual mais amplo, leitura mais rápida"],["Xadrez","1500+ ELO","Cálculo, espacial, foco"]],
-  h_shots:"Veja em ação",h_ben:"O que ele treina",doms:[["brain","Memória"],["target","Atenção"],["puzzle","Lógica"],["bolt","Velocidade"]],
+  h_shots:"Veja em ação",exit_h:"Experimente sem instalar",exit_p:"Jogue PsyGames direto no navegador — sem baixar nada.",h_ben:"O que ele treina",doms:[["brain","Memória"],["target","Atenção"],["puzzle","Lógica"],["bolt","Velocidade"]],
   sci:"Sinceramente: o treino traz ganhos mensuráveis nas habilidades treinadas. Não prometemos “+QI” — isso não tem comprovação. Apoiado em estudos reais (Jaeggi 2008, PNAS; ACTIVE/Rebok 2014, JAMA).",
   band_h:"Grátis no beta — experimente agora",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Privacidade"},
  de:{name:"Deutsch",ver:"v2 · Apple-Stil-Test",nav_prog:"Programme",nav_games:"Spiele",nav_ben:"Nutzen",nav_about:"Über",nav_dl:"Download",
@@ -290,7 +323,7 @@ const I18N={
   hooks:[["flask","Echte Wissenschaft","Auf validierter Forschung — keine Spielereien. Stroop, N-back, Corsi, WCST und mehr, treu zu den Originalprotokollen."],["target2","Dein Ziel","9 Programme — wähle deins: von Biohackern über Kinder bis Schachspieler."],["device","Überall","Mac, Windows, Android. Voll offline nutzbar — deine Daten bleiben auf dem Gerät."]],
   h_prog:"9 Programme — eins pro Ziel",h_prog_sub:"Jedes Programm sind 9 Trainer für eine Zielgruppe.",
   progs:[["NZT-48","Biohacker","Volle präfrontale Batterie"],["Reaction PRO","Piloten · Chirurgen","Sekundenentscheidungen"],["Unternehmer","Gründer","Entscheidungen unter Druck"],["Students PRO","SAT · GMAT · GRE","Fokus für lange Prüfungen"],["50+ Prävention","Aktiv altern","Gedächtnis & Tempo"],["Kinder 7–12","Eltern","Gedächtnis, Rechnen, Reaktion"],["Micro-Relax","Locker","Leichte Spiele für Pausen"],["Schnelllesen","Profis","Größeres Sichtfeld, schneller lesen"],["Schach","1500+ ELO","Berechnung, räumlich, Fokus"]],
-  h_shots:"So sieht es aus",h_ben:"Was es trainiert",doms:[["brain","Gedächtnis"],["target","Aufmerksamkeit"],["puzzle","Logik"],["bolt","Tempo"]],
+  h_shots:"So sieht es aus",exit_h:"Ohne Installation testen",exit_p:"Spiele PsyGames direkt im Browser — kein Download nötig.",h_ben:"Was es trainiert",doms:[["brain","Gedächtnis"],["target","Aufmerksamkeit"],["puzzle","Logik"],["bolt","Tempo"]],
   sci:"Ehrlich: Training bringt messbare Verbesserung bei trainierten Fähigkeiten. Kein „+IQ“-Versprechen — unbelegt. Gestützt auf echte Studien (Jaeggi 2008; ACTIVE/Rebok 2014).",
   band_h:"Kostenlos in der Beta — testen",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Datenschutz"},
  zh:{name:"中文",ver:"v2 · Apple 风格测试",nav_prog:"课程",nav_games:"游戏",nav_ben:"益处",nav_about:"关于",nav_dl:"下载",
@@ -301,7 +334,7 @@ const I18N={
   hooks:[["flask","真实科学","基于验证研究，绝非噱头。Stroop、N-back、Corsi、WCST 等，忠于原始范式。"],["target2","你的目标","9 套课程——选你的：从生物黑客到儿童再到棋手。"],["device","随处可用","Mac、Windows、Android，完全离线可用——数据留在你的设备上。"]],
   h_prog:"9 套课程——各有目标",h_prog_sub:"每套课程是针对一类人群的 9 个训练。",
   progs:[["NZT-48","生物黑客","完整前额叶训练组"],["Reaction PRO","飞行员·外科","秒级决策"],["创业者","创始人","压力下决策、风险、专注"],["Students PRO","SAT·GMAT·GRE","长时考试专注力"],["50+ 预防","活力衰老","记忆与速度"],["儿童 7–12","家长","趣味记忆、计算、反应"],["Micro-Relax","休闲","休息时的轻松游戏"],["速读","专业","拓宽视野，提升阅读速度"],["国际象棋","1500+ ELO","计算、空间、专注"]],
-  h_shots:"实际效果",h_ben:"训练什么",doms:[["brain","记忆"],["target","注意力"],["puzzle","逻辑"],["bolt","速度"]],
+  h_shots:"实际效果",exit_h:"无需安装即可体验",exit_p:"直接在浏览器里玩 PsyGames——无需下载。",h_ben:"训练什么",doms:[["brain","记忆"],["target","注意力"],["puzzle","逻辑"],["bolt","速度"]],
   sci:"诚实：训练能在所练技能上带来可测量提升。我们不承诺“提高智商”——未经证实。依据真实研究（Jaeggi 2008；ACTIVE/Rebok 2014）。",
   band_h:"测试期免费——立即体验",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"隐私"},
  hi:{name:"हिन्दी",ver:"v2 · Apple-शैली टेस्ट",nav_prog:"प्रोग्राम",nav_games:"गेम",nav_ben:"लाभ",nav_about:"परिचय",nav_dl:"डाउनलोड",
@@ -312,7 +345,7 @@ const I18N={
   hooks:[["flask","असली विज्ञान","मान्य शोध पर आधारित — कोई झाँसा नहीं। Stroop, N-back, Corsi, WCST व अन्य, मूल पद्धतियों के अनुरूप।"],["target2","आपका लक्ष्य","9 प्रोग्राम — अपना चुनें: बायोहैकर से लेकर बच्चों और शतरंज खिलाड़ियों तक।"],["device","हर जगह","Mac, Windows, Android. पूरी तरह ऑफ़लाइन चलता है — आपका डेटा आपके डिवाइस पर ही रहता है।"]],
   h_prog:"9 प्रोग्राम — हर लक्ष्य के लिए",h_prog_sub:"हर प्रोग्राम एक दर्शक-वर्ग के लिए 9 ट्रेनर।",
   progs:[["NZT-48","बायोहैकर","पूर्ण प्रीफ्रंटल बैटरी"],["Reaction PRO","पायलट · सर्जन","पल भर के निर्णय"],["उद्यमी","फ़ाउंडर","दबाव में निर्णय, जोखिम, फोकस"],["Students PRO","SAT · GMAT · GRE","लंबी परीक्षाओं के लिए फोकस"],["50+ रोकथाम","सक्रिय बुढ़ापा","याददाश्त व गति"],["बच्चे 7–12","माता-पिता","खेल में याददाश्त, गिनती"],["Micro-Relax","कैज़ुअल","ब्रेक के लिए हल्के खेल"],["तेज़ पठन","पेशेवर","व्यापक दृष्टि, तेज़ पढ़ाई"],["शतरंज","1500+ ELO","गणना, स्थानिक, फोकस"]],
-  h_shots:"इसे क्रिया में देखें",h_ben:"क्या ट्रेन करता है",doms:[["brain","याददाश्त"],["target","ध्यान"],["puzzle","तर्क"],["bolt","गति"]],
+  h_shots:"इसे क्रिया में देखें",exit_h:"बिना इंस्टॉल किए आज़माएँ",exit_p:"PsyGames को सीधे ब्राउज़र में खेलें — डाउनलोड की ज़रूरत नहीं।",h_ben:"क्या ट्रेन करता है",doms:[["brain","याददाश्त"],["target","ध्यान"],["puzzle","तर्क"],["bolt","गति"]],
   sci:"ईमानदार: ट्रेनिंग से प्रशिक्षित कौशल में मापने-योग्य सुधार होता है। “+IQ” का वादा नहीं — अप्रमाणित। असली अध्ययनों पर आधारित (Jaeggi 2008; ACTIVE/Rebok 2014)।",
   band_h:"बीटा में मुफ़्त — आज़माएँ",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"गोपनीयता"}
 };
@@ -342,6 +375,40 @@ ORDER.forEach(l=>{const o=document.createElement("option");o.value=l;o.textConte
 sel.onchange=()=>{var m={en:'/',ru:'/ru/',es:'/es/',pt:'/pt/',hi:'/hi/',zh:'/zh/',de:'/de/'};var seg=location.pathname.replace(/^\/(en|ru|es|pt|hi|zh|de)\//,'/').replace(/^\//,'');location.href=(m[sel.value]||'/')+seg;};
 let init="en";try{const s=localStorage.getItem("pg_lang");if(s&&I18N[s])init=s;else{const n=(navigator.language||"en").slice(0,2);if(I18N[n])init=n;}}catch(e){}
 apply("ru");
+
+/* ── платформа-детект → хинт прямой загрузки под CTA ── */
+(function(){
+  var ua=navigator.userAgent||'', os='', f='';
+  if(/Android/i.test(ua)){os='Android';f='/PsyGames-android.apk';}
+  else if(/iPhone|iPad|iPod/i.test(ua)){os='iOS';}
+  else if(/Macintosh|Mac OS X/i.test(ua)){os='macOS';f='/PsyGames-macos-arm64.tar.gz';}
+  else if(/Windows/i.test(ua)){os='Windows';f='/PsyGames-windows-setup.exe';}
+  var L=(document.documentElement.lang||'en');
+  var T={en:['Download for','all platforms','Play in browser'],ru:['Скачать для','все платформы','Играть в браузере'],
+   es:['Descargar para','todas las plataformas','Jugar en navegador'],pt:['Baixar para','todas as plataformas','Jogar no navegador'],
+   de:['Download für','alle Plattformen','Im Browser spielen'],zh:['下载','全部平台','在浏览器体验'],hi:['डाउनलोड','सभी प्लेटफ़ॉर्म','ब्राउज़र में खेलें']};
+  var t=T[L]||T.en, h=document.getElementById('oshint');
+  if(!h||!os) return;
+  if(f) h.innerHTML='⬇ <a href="'+f+'">'+t[0]+' '+os+'</a> · <a href="/ru/download/">'+t[1]+'</a>';
+  else h.innerHTML='<a href="https://donosov999-ai.github.io/psygames-web/">'+t[2]+'</a>'; // iOS — пока только web
+})();
+
+/* ── exit-intent: 1 раз за сессию, десктоп (увод курсора вверх) ── */
+(function(){
+  var ov=document.getElementById('exov'); if(!ov) return;
+  var armed=false, shown=false;
+  try{ if(sessionStorage.getItem('pg_exit')) shown=true; }catch(e){}
+  setTimeout(function(){armed=true}, 12000);
+  document.addEventListener('mouseout', function(e){
+    if(armed && !shown && !e.relatedTarget && e.clientY<10){
+      shown=true; try{sessionStorage.setItem('pg_exit','1')}catch(e){}
+      ov.classList.add('show');
+    }
+  });
+  var close=function(){ov.classList.remove('show')};
+  document.getElementById('exx').addEventListener('click', close);
+  ov.addEventListener('click', function(e){ if(e.target===ov) close(); });
+})();
 </script>
 
 
