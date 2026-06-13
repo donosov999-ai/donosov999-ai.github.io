@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://psy-games.pro/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/"/>
@@ -13,6 +16,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/ru/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/"/>
@@ -24,6 +30,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/es/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/"/>
@@ -35,6 +44,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/pt/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/"/>
@@ -46,6 +58,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/hi/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/"/>
@@ -57,6 +72,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/zh/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/"/>
@@ -68,6 +86,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/de/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/"/>
@@ -79,6 +100,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/programs/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/programs/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/programs/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/programs/"/>
@@ -90,6 +114,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/ru/programs/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/programs/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/programs/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/programs/"/>
@@ -101,6 +128,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/es/programs/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/programs/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/programs/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/programs/"/>
@@ -112,6 +142,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/pt/programs/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/programs/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/programs/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/programs/"/>
@@ -123,6 +156,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/hi/programs/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/programs/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/programs/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/programs/"/>
@@ -134,6 +170,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/zh/programs/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/programs/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/programs/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/programs/"/>
@@ -145,6 +184,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/de/programs/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/programs/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/programs/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/programs/"/>
@@ -156,6 +198,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/games/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/games/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/games/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/games/"/>
@@ -167,6 +212,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/ru/games/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/games/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/games/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/games/"/>
@@ -178,6 +226,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/es/games/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/games/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/games/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/games/"/>
@@ -189,6 +240,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/pt/games/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/games/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/games/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/games/"/>
@@ -200,6 +254,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/hi/games/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/games/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/games/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/games/"/>
@@ -211,6 +268,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/zh/games/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/games/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/games/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/games/"/>
@@ -222,6 +282,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/de/games/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/games/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/games/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/games/"/>
@@ -233,6 +296,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/benefits/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/benefits/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/benefits/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/benefits/"/>
@@ -244,6 +310,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/ru/benefits/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/benefits/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/benefits/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/benefits/"/>
@@ -255,6 +324,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/es/benefits/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/benefits/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/benefits/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/benefits/"/>
@@ -266,6 +338,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/pt/benefits/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/benefits/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/benefits/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/benefits/"/>
@@ -277,6 +352,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/hi/benefits/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/benefits/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/benefits/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/benefits/"/>
@@ -288,6 +366,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/zh/benefits/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/benefits/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/benefits/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/benefits/"/>
@@ -299,6 +380,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/de/benefits/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/benefits/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/benefits/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/benefits/"/>
@@ -310,6 +394,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/about/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/about/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/about/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/about/"/>
@@ -321,6 +408,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/ru/about/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/about/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/about/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/about/"/>
@@ -332,6 +422,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/es/about/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/about/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/about/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/about/"/>
@@ -343,6 +436,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/pt/about/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/about/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/about/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/about/"/>
@@ -354,6 +450,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/hi/about/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/about/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/about/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/about/"/>
@@ -365,6 +464,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/zh/about/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/about/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/about/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/about/"/>
@@ -376,6 +478,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/de/about/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/about/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/about/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/about/"/>
@@ -387,6 +492,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/download/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/download/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/download/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/download/"/>
@@ -398,6 +506,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/ru/download/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/download/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/download/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/download/"/>
@@ -409,6 +520,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/es/download/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/download/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/download/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/download/"/>
@@ -420,6 +534,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/pt/download/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/download/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/download/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/download/"/>
@@ -431,6 +548,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/hi/download/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/download/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/download/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/download/"/>
@@ -442,6 +562,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/zh/download/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/download/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/download/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/download/"/>
@@ -453,6 +576,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/de/download/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/download/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/download/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/download/"/>
@@ -464,6 +590,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/privacy/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/privacy/"/>
@@ -475,6 +604,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/ru/privacy/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/privacy/"/>
@@ -486,6 +618,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/es/privacy/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/privacy/"/>
@@ -497,6 +632,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/pt/privacy/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/privacy/"/>
@@ -508,6 +646,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/hi/privacy/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/privacy/"/>
@@ -519,6 +660,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/zh/privacy/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/privacy/"/>
@@ -530,6 +674,9 @@
   </url>
   <url>
     <loc>https://psy-games.pro/de/privacy/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://psy-games.pro/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://psy-games.pro/ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://psy-games.pro/es/privacy/"/>

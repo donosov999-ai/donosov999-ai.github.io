@@ -12,6 +12,17 @@ const OUT = '/Users/denisonosov/dev/psygames-site-i18n/dist-i18n';
 const BASE = 'https://psy-games.pro';
 const LANGS = ['en','ru','es','pt','hi','zh','de'];
 const LOCALE = { en:'en_US', ru:'ru_RU', es:'es_ES', pt:'pt_BR', hi:'hi_IN', zh:'zh_CN', de:'de_DE' };
+// meta keywords по языкам (Yandex учитывает; Google игнорит — но безвредно). Не спамим.
+const KEYWORDS = {
+  en:"brain training, cognitive training, brain games, memory training, attention training, concentration, focus, mental exercises, brain trainer, Schulte table, N-back, Stroop test, working memory, reaction speed, free brain training app",
+  ru:"тренировка мозга, когнитивные тренировки, игры для мозга, тренажёр памяти, развитие внимания, концентрация, упражнения для ума, нейробика, таблица Шульте, N-back, тест Струпа, рабочая память, скорость реакции, тренажёр мозга бесплатно",
+  es:"entrenamiento cerebral, entrenamiento cognitivo, juegos mentales, entrenamiento de memoria, entrenamiento de atención, concentración, ejercicios mentales, tabla de Schulte, N-back, test de Stroop, memoria de trabajo, velocidad de reacción, gimnasia mental gratis",
+  pt:"treino cerebral, treino cognitivo, jogos mentais, treino de memória, treino de atenção, concentração, exercícios mentais, tabela de Schulte, N-back, teste de Stroop, memória de trabalho, velocidade de reação, ginástica cerebral grátis",
+  de:"Gehirntraining, kognitives Training, Denkspiele, Gedächtnistraining, Aufmerksamkeitstraining, Konzentration, geistige Übungen, Schulte-Tabelle, N-back, Stroop-Test, Arbeitsgedächtnis, Reaktionsgeschwindigkeit, Gehirnjogging kostenlos",
+  zh:"大脑训练, 认知训练, 益智游戏, 记忆训练, 注意力训练, 专注力, 脑力锻炼, 舒尔特方格, N-back, 斯特鲁普测试, 工作记忆, 反应速度, 免费大脑训练",
+  hi:"मस्तिष्क प्रशिक्षण, संज्ञानात्मक प्रशिक्षण, दिमागी खेल, स्मृति प्रशिक्षण, ध्यान प्रशिक्षण, एकाग्रता, मानसिक व्यायाम, शुल्टे टेबल, N-back, स्ट्रूप टेस्ट, कार्यशील स्मृति, प्रतिक्रिया गति, मुफ़्त ब्रेन ट्रेनिंग",
+};
+const LASTMOD = new Date().toISOString().slice(0, 10); // YYYY-MM-DD для sitemap
 // page key '' = главная (index.html в корне); остальные — подпапки
 const PAGES = ['', 'programs', 'games', 'benefits', 'about', 'download', 'privacy'];
 
@@ -84,6 +95,10 @@ for (const page of PAGES) {
     let titleEl = doc.querySelector('title'); if (!titleEl) { titleEl = doc.createElement('title'); head.appendChild(titleEl); }
     titleEl.textContent = title;
     let descEl = doc.querySelector('meta[name="description"]'); if (descEl) descEl.setAttribute('content', desc);
+    // локализованные meta keywords
+    let kwEl = doc.querySelector('meta[name="keywords"]');
+    if (!kwEl) { kwEl = doc.createElement('meta'); kwEl.setAttribute('name', 'keywords'); head.appendChild(kwEl); }
+    kwEl.setAttribute('content', KEYWORDS[lang] || KEYWORDS.en);
     // вставка нового SEO-блока
     const seo = doc.createElement('div'); // временный контейнер
     seo.innerHTML =
@@ -122,6 +137,9 @@ const sm = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${sitemapUrls.flatMap(page => LANGS.map(lang => `  <url>
     <loc>${pageUrl(lang, page)}</loc>
+    <lastmod>${LASTMOD}</lastmod>
+    <changefreq>${page === '' ? 'weekly' : 'monthly'}</changefreq>
+    <priority>${page === '' ? '1.0' : (page === 'privacy' ? '0.4' : '0.8')}</priority>
 ${LANGS.map(a => `    <xhtml:link rel="alternate" hreflang="${a}" href="${pageUrl(a, page)}"/>`).join('\n')}
     <xhtml:link rel="alternate" hreflang="x-default" href="${pageUrl('en', page)}"/>
   </url>`)).join('\n')}
