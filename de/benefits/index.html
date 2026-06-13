@@ -39,6 +39,18 @@
   .btn{display:inline-block;text-decoration:none;font-weight:700;background:var(--accent);color:#fff;padding:13px 26px;border-radius:11px}
   footer{text-align:center;color:var(--mut);font-size:12.5px;margin-top:34px;border-top:1px solid var(--line);padding-top:20px}
   a.link{color:var(--accent)}
+
+  /* ── единый футер ── */
+  footer.ft{text-align:left;padding:0;margin-top:56px;border-top:1px solid var(--line);background:rgba(255,255,255,.015)}
+  .ft .ftin{max-width:1000px;margin:0 auto;padding:36px 20px 8px;display:grid;grid-template-columns:1.5fr 1fr 1.2fr;gap:30px}
+  .ft .ftlogo{font-weight:800;font-size:17px;margin-bottom:9px}
+  .ft .fttag{color:var(--mut);font-size:13px;line-height:1.55;max-width:300px;margin-bottom:13px}
+  .ft .ftplat{color:var(--mut);font-size:12px;opacity:.85}
+  .ft .fth{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--mut);margin-bottom:11px}
+  .ft .ftc a{display:block;color:var(--txt);text-decoration:none;font-size:13.5px;margin:7px 0;opacity:.82;transition:.15s}
+  .ft .ftc a:hover{opacity:1;color:var(--accent)}
+  .ft .ftbar{max-width:1000px;margin:22px auto 0;padding:15px 20px 42px;border-top:1px solid var(--line);color:var(--mut);font-size:12.5px}
+  @media(max-width:640px){.ft .ftin{grid-template-columns:1fr 1fr;gap:24px}.ft .ftc-brand{grid-column:1/-1}}
 </style>
 
 
@@ -87,7 +99,7 @@
   </div>
 
   <div class="band"><a class="btn" href="/de/download/" data-i18n="cta_dl">Kostenlos testen</a></div>
-  <footer><span data-i18n="foot">© 2026 PsyGames · Denis Onosov (ODV999)</span> · <a class="link" href="/de/privacy/" data-i18n="priv">Datenschutz</a></footer>
+  
 </div>
 <script>
 const I18N={
@@ -174,6 +186,39 @@ ORDER.forEach(l=>{const o=document.createElement("option");o.value=l;o.textConte
 sel.onchange=()=>{var m={en:'/',ru:'/ru/',es:'/es/',pt:'/pt/',hi:'/hi/',zh:'/zh/',de:'/de/'};var seg=location.pathname.replace(/^\/(en|ru|es|pt|hi|zh|de)\//,'/').replace(/^\//,'');location.href=(m[sel.value]||'/')+seg;};
 let init="en";try{const s=localStorage.getItem("pg_lang");if(s&&I18N[s])init=s;else{const n=(navigator.language||"en").slice(0,2);if(I18N[n])init=n;}}catch(e){}
 apply("de");
+</script>
+
+<footer class="ft" id="psyft">
+  <div class="ftin">
+    <div class="ftc ftc-brand">
+      <div class="ftlogo">🧠 PsyGames</div>
+      <p class="fttag" data-f="tag">Wissenschaftlich fundiertes Gehirntraining — kostenlos, ohne Werbung und Konto.</p>
+      <div class="ftplat">Mac · Windows · Android · Web</div>
+    </div>
+    <nav class="ftc">
+      <div class="fth" data-f="h_product">Produkt</div>
+      <a href="/de/programs/" data-f="programs">Programme</a>
+      <a href="/de/games/" data-f="trainers">Trainer</a>
+      <a href="/de/benefits/" data-f="benefits">Nutzen</a>
+      <a href="/de/download/" data-f="download">Download</a>
+    </nav>
+    <nav class="ftc">
+      <div class="fth" data-f="h_legal">Rechtliches</div>
+      <a href="/de/privacy/" data-f="privacy">Datenschutzerklärung</a>
+      <div class="fth" style="margin-top:18px" data-f="h_support">Support</div>
+      <a href="mailto:d.onosov999@gmail.com">d.onosov999@gmail.com</a>
+    </nav>
+  </div>
+  <div class="ftbar"><span data-f="copyright">© 2026 PsyGames · Denis Onosov (ODV999)</span></div>
+</footer>
+
+<script>
+(function(){var F={"en":{"tag":"Science-based cognitive training — free, no ads, no account.","h_product":"Product","programs":"Programs","trainers":"Trainers","benefits":"Benefits","download":"Download","h_legal":"Legal","privacy":"Privacy Policy","h_support":"Support","copyright":"© 2026 PsyGames · Denis Onosov (ODV999)"},"ru":{"tag":"Тренировка мозга на научной основе — бесплатно, без рекламы и регистрации.","h_product":"Продукт","programs":"Программы","trainers":"Тренажёры","benefits":"Польза","download":"Скачать","h_legal":"Правовое","privacy":"Политика конфиденциальности","h_support":"Поддержка","copyright":"© 2026 PsyGames · Denis Onosov (ODV999)"},"es":{"tag":"Entrenamiento cognitivo con base científica — gratis, sin anuncios ni cuenta.","h_product":"Producto","programs":"Programas","trainers":"Entrenadores","benefits":"Beneficios","download":"Descargar","h_legal":"Legal","privacy":"Política de privacidad","h_support":"Soporte","copyright":"© 2026 PsyGames · Denis Onosov (ODV999)"},"pt":{"tag":"Treino cognitivo com base científica — grátis, sem anúncios nem conta.","h_product":"Produto","programs":"Programas","trainers":"Treinadores","benefits":"Benefícios","download":"Baixar","h_legal":"Jurídico","privacy":"Política de Privacidade","h_support":"Suporte","copyright":"© 2026 PsyGames · Denis Onosov (ODV999)"},"de":{"tag":"Wissenschaftlich fundiertes Gehirntraining — kostenlos, ohne Werbung und Konto.","h_product":"Produkt","programs":"Programme","trainers":"Trainer","benefits":"Nutzen","download":"Download","h_legal":"Rechtliches","privacy":"Datenschutzerklärung","h_support":"Support","copyright":"© 2026 PsyGames · Denis Onosov (ODV999)"},"zh":{"tag":"基于科学的认知训练——免费、无广告、无需账户。","h_product":"产品","programs":"课程","trainers":"训练","benefits":"益处","download":"下载","h_legal":"法律","privacy":"隐私政策","h_support":"支持","copyright":"© 2026 PsyGames · Denis Onosov (ODV999)"},"hi":{"tag":"विज्ञान-आधारित संज्ञानात्मक प्रशिक्षण — मुफ़्त, बिना विज्ञापन व खाते के।","h_product":"उत्पाद","programs":"प्रोग्राम","trainers":"ट्रेनर","benefits":"लाभ","download":"डाउनलोड","h_legal":"कानूनी","privacy":"गोपनीयता नीति","h_support":"सहायता","copyright":"© 2026 PsyGames · Denis Onosov (ODV999)"}};
+function rf(l){var d=F[l]||F.en;var ft=document.getElementById('psyft');if(!ft)return;ft.querySelectorAll('[data-f]').forEach(function(e){var k=e.getAttribute('data-f');if(d[k]!=null)e.textContent=d[k];});}
+window.renderFooter=rf;
+try{rf(document.documentElement.lang||'en');}catch(e){}
+try{if(window.apply){var _a=window.apply;window.apply=function(x){_a(x);try{rf(x)}catch(e){}};}}catch(e){}
+})();
 </script>
 
 

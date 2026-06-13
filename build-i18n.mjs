@@ -66,6 +66,7 @@ for (const page of PAGES) {
     const doc = window.document;
     try {
       if (typeof window.apply === 'function') window.apply(lang);
+      if (typeof window.renderFooter === 'function') window.renderFooter(lang);
     } catch (e) {
       console.error(`apply(${lang}) на ${page||'index'}:`, e.message);
     }
