@@ -66,6 +66,32 @@
   footer{text-align:center;color:var(--mut);font-size:13px;padding:30px 0 50px;border-top:1px solid var(--line)}
   footer a{color:var(--accent);text-decoration:none}
   .badge{display:inline-block;font-size:11px;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:4px 12px;margin-top:16px;letter-spacing:.02em}
+  /* ── скриншот-карусель (CSS-моки геймплея в рамке телефона) ── */
+  .shotswrap{position:relative;max-width:1040px;margin:0 auto}
+  .shots{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .shots::-webkit-scrollbar{display:none}
+  .shot{flex:0 0 auto;scroll-snap-align:center;width:228px;text-align:center}
+  .phone{width:228px;height:464px;background:#000;border-radius:34px;padding:9px;position:relative;box-shadow:0 20px 50px -12px rgba(0,0,0,.85),inset 0 0 0 1px rgba(255,255,255,.09)}
+  .phone::before{content:"";position:absolute;top:15px;left:50%;transform:translateX(-50%);width:52px;height:5px;background:#1b1b22;border-radius:3px;z-index:2}
+  .screen{width:100%;height:100%;background:#0f0e17;border-radius:26px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px 16px}
+  .scr-h{font-size:11px;color:var(--mut);letter-spacing:.04em;text-transform:uppercase;align-self:flex-start}
+  .shot-cap{margin-top:12px;font-size:12.5px;color:var(--mut)}
+  .shot-cap b{color:var(--txt);font-weight:700;display:block;font-size:14px;margin-bottom:1px}
+  .mkgrid{display:grid;gap:6px;width:100%}
+  .mkgrid.g5{grid-template-columns:repeat(5,1fr)}
+  .mkgrid.g4{grid-template-columns:repeat(4,1fr)}
+  .mkgrid.g3{grid-template-columns:repeat(3,1fr);max-width:150px}
+  .mkc{aspect-ratio:1;background:#1a1925;border:1px solid #2a2838;border-radius:7px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:#e8e6f0}
+  .mkc.on{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 0 14px rgba(124,92,255,.5)}
+  .mkc.ok{background:#22c55e;color:#fff;border-color:#22c55e}
+  .mkbig{font-size:30px;font-weight:900;color:#fff}
+  .mkrow{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+  .mkbtn{padding:10px 16px;border-radius:10px;font-weight:800;font-size:13px;color:#fff}
+  .mklbl{font-size:12px;color:var(--mut)}
+  .shots-arrow{position:absolute;top:46%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;background:rgba(20,20,28,.9);border:1px solid var(--line);color:var(--txt);font-size:22px;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:3;backdrop-filter:blur(8px)}
+  .shots-arrow:hover{background:var(--accent);border-color:var(--accent)}
+  .shots-arrow.l{left:-8px}.shots-arrow.r{right:-8px}
+  @media(min-width:780px){.shots-arrow{display:flex}}
 </style>
 <meta property="og:type" content="website"><meta property="og:site_name" content="PsyGames"><meta property="og:title" content="PsyGames — Cognitive Training"><meta property="og:description" content="48 science-based cognitive trainers — memory, attention, logic and speed. Mac, Windows, Android."><meta property="og:image" content="https://psy-games.pro/og-cover.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="PsyGames — Cognitive Training"><meta name="twitter:image" content="https://psy-games.pro/og-cover.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"PsyGames","applicationCategory":"GameApplication","operatingSystem":"macOS, Windows, Android","description":"48 science-based cognitive trainers — memory, attention, logic and speed. Mac, Windows, Android.","url":"https://psy-games.pro/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 
@@ -115,6 +141,70 @@
   </header>
 
   <div class="sec">
+    <h2 data-i18n="h_shots">So sieht es aus</h2>
+    <div class="shotswrap">
+      <button class="shots-arrow l" aria-label="prev" onclick="document.getElementById('shots').scrollBy({left:-246,behavior:'smooth'})">‹</button>
+      <div class="shots" id="shots">
+        <!-- Schulte -->
+        <div class="shot"><div class="phone"><div class="screen">
+          <div class="scr-h">▢ 1 → 25</div>
+          <div class="mkgrid g5">
+            <div class="mkc">15</div><div class="mkc">3</div><div class="mkc on">1</div><div class="mkc">19</div><div class="mkc">8</div>
+            <div class="mkc">22</div><div class="mkc">11</div><div class="mkc">6</div><div class="mkc">17</div><div class="mkc">2</div>
+            <div class="mkc">9</div><div class="mkc">24</div><div class="mkc">13</div><div class="mkc">5</div><div class="mkc">20</div>
+            <div class="mkc">7</div><div class="mkc">18</div><div class="mkc">4</div><div class="mkc">23</div><div class="mkc">12</div>
+            <div class="mkc">16</div><div class="mkc">10</div><div class="mkc">21</div><div class="mkc">14</div><div class="mkc">25</div>
+          </div>
+        </div></div><div class="shot-cap"><b>Schulte</b>Attention · visual span</div></div>
+        <!-- Memory Matrix -->
+        <div class="shot"><div class="phone"><div class="screen">
+          <div class="scr-h">▦ Memorize</div>
+          <div class="mkgrid g4">
+            <div class="mkc"></div><div class="mkc on"></div><div class="mkc"></div><div class="mkc"></div>
+            <div class="mkc on"></div><div class="mkc"></div><div class="mkc"></div><div class="mkc on"></div>
+            <div class="mkc"></div><div class="mkc"></div><div class="mkc on"></div><div class="mkc"></div>
+            <div class="mkc"></div><div class="mkc on"></div><div class="mkc"></div><div class="mkc"></div>
+          </div>
+        </div></div><div class="shot-cap"><b>Memory Matrix</b>Visual memory</div></div>
+        <!-- Stroop -->
+        <div class="shot"><div class="phone"><div class="screen">
+          <div class="scr-h">Tap the ink color</div>
+          <div class="mkbig" style="color:#ef4444">BLUE</div>
+          <div class="mkrow" style="margin-top:8px">
+            <span class="mkbtn" style="background:#ef4444">RED</span>
+            <span class="mkbtn" style="background:#3b82f6">BLUE</span>
+          </div>
+          <div class="mkrow">
+            <span class="mkbtn" style="background:#22c55e">GREEN</span>
+            <span class="mkbtn" style="background:#eab308">YELLOW</span>
+          </div>
+        </div></div><div class="shot-cap"><b>Stroop</b>Inhibition</div></div>
+        <!-- N-back -->
+        <div class="shot"><div class="phone"><div class="screen">
+          <div class="scr-h">N-back · N=2</div>
+          <div class="mkgrid g3">
+            <div class="mkc"></div><div class="mkc"></div><div class="mkc"></div>
+            <div class="mkc"></div><div class="mkc on"></div><div class="mkc"></div>
+            <div class="mkc"></div><div class="mkc"></div><div class="mkc"></div>
+          </div>
+          <span class="mkbtn" style="background:var(--accent);margin-top:6px">MATCH</span>
+        </div></div><div class="shot-cap"><b>Dual N-back</b>Working memory</div></div>
+        <!-- Math Sprint -->
+        <div class="shot"><div class="phone"><div class="screen">
+          <div class="scr-h">Math Sprint · 0:42</div>
+          <div class="mkbig">7 + 8 = ?</div>
+          <div class="mkrow" style="margin-top:10px">
+            <span class="mkc" style="width:54px;height:48px">13</span>
+            <span class="mkc ok" style="width:54px;height:48px">15</span>
+            <span class="mkc" style="width:54px;height:48px">16</span>
+          </div>
+        </div></div><div class="shot-cap"><b>Math Sprint</b>Processing speed</div></div>
+      </div>
+      <button class="shots-arrow r" aria-label="next" onclick="document.getElementById('shots').scrollBy({left:246,behavior:'smooth'})">›</button>
+    </div>
+  </div>
+
+  <div class="sec">
     <div class="grid3" id="hooks"><div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6.5L4.5 19a1.5 1.5 0 0 0 1.3 2.3h12.4A1.5 1.5 0 0 0 19.5 19L14 9.5V3"></path><path d="M7.5 15h9"></path></svg></div><h3>Echte Wissenschaft</h3><p>Auf validierter Forschung — keine Spielereien. Stroop, N-back, Corsi, WCST und mehr, treu zu den Originalprotokollen.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12 2.3 2.3L15.5 9.5"></path></svg></div><h3>Dein Ziel</h3><p>9 Programme — wähle deins: von Biohackern über Kinder bis Schachspieler.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="3"></rect><path d="M10.5 18.5h3"></path></svg></div><h3>Überall</h3><p>Mac, Windows, Android. Voll offline nutzbar — deine Daten bleiben auf dem Gerät.</p></div></div>
   </div>
 
@@ -156,7 +246,7 @@ const I18N={
   hooks:[["flask","Real science","Built on validated research — not gimmicks. Stroop, N-back, Corsi, WCST and more, faithful to the original protocols."],["target2","Your goal","9 programs — pick the one that fits you, from biohackers to kids to chess players."],["device","Everywhere","Mac, Windows, Android. Works fully offline — your data stays on your device."]],
   h_prog:"9 programs — one per goal",h_prog_sub:"Each program is 9 trainers tuned to an audience.",
   progs:[["NZT-48","Biohackers","Full prefrontal battery"],["Reaction PRO","Pilots · surgeons · drivers","Split-second decisions under stress"],["Entrepreneurs","Founders · execs","Decisions under pressure, risk, focus"],["Students PRO","SAT · GMAT · GRE","Focus for long exams"],["50+ Prevention","Active aging","Memory & speed, slow aging"],["Kids 7–12","Parents","Playful memory, counting, reaction"],["Micro-Relax","Casual","Light brain games for breaks"],["Speed Reading","Pros","Wider visual span, faster reading"],["Chess","1500+ ELO","Calculation, spatial, focus"]],
-  h_ben:"What it trains",doms:[["brain","Memory"],["target","Attention"],["puzzle","Logic"],["bolt","Speed"]],
+  h_shots:"See it in action",h_ben:"What it trains",doms:[["brain","Memory"],["target","Attention"],["puzzle","Logic"],["bolt","Speed"]],
   sci:"Honest: cognitive training gives measurable gains on the trained skills. We don't promise “+IQ” — that's unproven. Backed by real studies (Jaeggi 2008, PNAS; ACTIVE/Rebok 2014, JAMA).",
   band_h:"Free during beta — try it now",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Privacy"},
  ru:{name:"Русский",ver:"v2 · тест Apple-стиля",nav_prog:"Программы",nav_games:"Игры",nav_ben:"Польза",nav_about:"О проекте",nav_dl:"Скачать",
@@ -167,7 +257,7 @@ const I18N={
   hooks:[["flask","Реальная наука","На валидированных исследованиях, без пустышек. Stroop, N-back, Корси, WCST и другие — точно по оригинальным методикам."],["target2","Твоя цель","9 программ — выбери свою: от биохакеров до детей и шахматистов."],["device","Везде","Mac, Windows, Android. Работает полностью офлайн — данные остаются на устройстве."]],
   h_prog:"9 программ — под каждую цель",h_prog_sub:"Каждая программа — 9 тренажёров под аудиторию.",
   progs:[["NZT-48","Биохакеры","Полная батарея префронталки"],["Реакция ПРО","Пилоты · хирурги · водители","Решения за секунды под стрессом"],["Предприниматели","Основатели · топы","Решения под давлением, риск, фокус"],["Студенты PRO","ЕГЭ · GMAT · GRE","Фокус на длинных экзаменах"],["50+ профилактика","Долголетие","Память и скорость, замедление старения"],["Дети 7–12","Родители","Память, счёт, реакция в игре"],["Микро-релакс","Казуально","Лёгкие игры для перерыва"],["Скорочтение","Профи","Шире поле зрения, быстрее чтение"],["Шахматист","1500+ ELO","Расчёт, пространство, концентрация"]],
-  h_ben:"Что тренирует",doms:[["brain","Память"],["target","Внимание"],["puzzle","Логика"],["bolt","Скорость"]],
+  h_shots:"Как это выглядит",h_ben:"Что тренирует",doms:[["brain","Память"],["target","Внимание"],["puzzle","Логика"],["bolt","Скорость"]],
   sci:"Честно: тренинг даёт измеримый прогресс в тренируемых навыках. «+IQ» не обещаем — не доказано. Опираемся на реальные исследования (Jaeggi 2008, PNAS; ACTIVE/Rebok 2014, JAMA).",
   band_h:"Бесплатно на бете — попробуй",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Конфиденциальность"},
  es:{name:"Español",ver:"v2 · prueba estilo Apple",nav_prog:"Programas",nav_games:"Juegos",nav_ben:"Beneficios",nav_about:"Acerca de",nav_dl:"Descargar",
@@ -178,7 +268,7 @@ const I18N={
   hooks:[["flask","Ciencia real","Basado en investigación validada, sin trucos. Stroop, N-back, Corsi, WCST y más, fieles a los protocolos originales."],["target2","Tu objetivo","9 programas — elige el tuyo: de biohackers a niños y ajedrecistas."],["device","En todas partes","Mac, Windows, Android. Funciona sin conexión — tus datos se quedan en tu dispositivo."]],
   h_prog:"9 programas — uno por objetivo",h_prog_sub:"Cada programa son 9 entrenadores para un público.",
   progs:[["NZT-48","Biohackers","Batería prefrontal completa"],["Reaction PRO","Pilotos · cirujanos","Decisiones en un segundo"],["Emprendedores","Fundadores","Decisiones bajo presión, riesgo, foco"],["Students PRO","SAT · GMAT · GRE","Concentración en exámenes largos"],["50+ Prevención","Envejecer activo","Memoria y velocidad"],["Niños 7–12","Padres","Memoria, cálculo, reacción"],["Micro-Relax","Casual","Juegos ligeros para pausas"],["Lectura veloz","Profesionales","Mayor campo visual, leer más rápido"],["Ajedrez","1500+ ELO","Cálculo, espacial, concentración"]],
-  h_ben:"Qué entrena",doms:[["brain","Memoria"],["target","Atención"],["puzzle","Lógica"],["bolt","Velocidad"]],
+  h_shots:"Míralo en acción",h_ben:"Qué entrena",doms:[["brain","Memoria"],["target","Atención"],["puzzle","Lógica"],["bolt","Velocidad"]],
   sci:"Honesto: el entrenamiento mejora las habilidades entrenadas de forma medible. No prometemos “+CI” — no está probado. Basado en estudios reales (Jaeggi 2008; ACTIVE/Rebok 2014).",
   band_h:"Gratis en beta — pruébalo",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Privacidad"},
  pt:{name:"Português",ver:"v2 · teste estilo Apple",nav_prog:"Programas",nav_games:"Jogos",nav_ben:"Benefícios",nav_about:"Sobre",nav_dl:"Baixar",
@@ -189,7 +279,7 @@ const I18N={
   hooks:[["flask","Ciência de verdade","Baseado em pesquisa validada, sem truques. Stroop, N-back, Corsi, WCST e mais, fiéis aos protocolos originais."],["target2","Seu objetivo","9 programas — escolha o seu: de biohackers a crianças e enxadristas."],["device","Em todo lugar","Mac, Windows, Android. Funciona totalmente offline — seus dados ficam no seu aparelho."]],
   h_prog:"9 programas — um por objetivo",h_prog_sub:"Cada programa são 9 treinadores ajustados a um público.",
   progs:[["NZT-48","Biohackers","Bateria pré-frontal completa"],["Reaction PRO","Pilotos · cirurgiões · motoristas","Decisões em frações de segundo sob estresse"],["Empreendedores","Fundadores · executivos","Decisões sob pressão, risco, foco"],["Students PRO","SAT · GMAT · GRE","Foco para provas longas"],["50+ Prevenção","Envelhecer ativo","Memória e velocidade, retardar o envelhecimento"],["Crianças 7–12","Pais","Memória, contagem e reação de forma lúdica"],["Micro-Relax","Casual","Jogos leves para as pausas"],["Leitura veloz","Profissionais","Campo visual mais amplo, leitura mais rápida"],["Xadrez","1500+ ELO","Cálculo, espacial, foco"]],
-  h_ben:"O que ele treina",doms:[["brain","Memória"],["target","Atenção"],["puzzle","Lógica"],["bolt","Velocidade"]],
+  h_shots:"Veja em ação",h_ben:"O que ele treina",doms:[["brain","Memória"],["target","Atenção"],["puzzle","Lógica"],["bolt","Velocidade"]],
   sci:"Sinceramente: o treino traz ganhos mensuráveis nas habilidades treinadas. Não prometemos “+QI” — isso não tem comprovação. Apoiado em estudos reais (Jaeggi 2008, PNAS; ACTIVE/Rebok 2014, JAMA).",
   band_h:"Grátis no beta — experimente agora",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Privacidade"},
  de:{name:"Deutsch",ver:"v2 · Apple-Stil-Test",nav_prog:"Programme",nav_games:"Spiele",nav_ben:"Nutzen",nav_about:"Über",nav_dl:"Download",
@@ -200,7 +290,7 @@ const I18N={
   hooks:[["flask","Echte Wissenschaft","Auf validierter Forschung — keine Spielereien. Stroop, N-back, Corsi, WCST und mehr, treu zu den Originalprotokollen."],["target2","Dein Ziel","9 Programme — wähle deins: von Biohackern über Kinder bis Schachspieler."],["device","Überall","Mac, Windows, Android. Voll offline nutzbar — deine Daten bleiben auf dem Gerät."]],
   h_prog:"9 Programme — eins pro Ziel",h_prog_sub:"Jedes Programm sind 9 Trainer für eine Zielgruppe.",
   progs:[["NZT-48","Biohacker","Volle präfrontale Batterie"],["Reaction PRO","Piloten · Chirurgen","Sekundenentscheidungen"],["Unternehmer","Gründer","Entscheidungen unter Druck"],["Students PRO","SAT · GMAT · GRE","Fokus für lange Prüfungen"],["50+ Prävention","Aktiv altern","Gedächtnis & Tempo"],["Kinder 7–12","Eltern","Gedächtnis, Rechnen, Reaktion"],["Micro-Relax","Locker","Leichte Spiele für Pausen"],["Schnelllesen","Profis","Größeres Sichtfeld, schneller lesen"],["Schach","1500+ ELO","Berechnung, räumlich, Fokus"]],
-  h_ben:"Was es trainiert",doms:[["brain","Gedächtnis"],["target","Aufmerksamkeit"],["puzzle","Logik"],["bolt","Tempo"]],
+  h_shots:"So sieht es aus",h_ben:"Was es trainiert",doms:[["brain","Gedächtnis"],["target","Aufmerksamkeit"],["puzzle","Logik"],["bolt","Tempo"]],
   sci:"Ehrlich: Training bringt messbare Verbesserung bei trainierten Fähigkeiten. Kein „+IQ“-Versprechen — unbelegt. Gestützt auf echte Studien (Jaeggi 2008; ACTIVE/Rebok 2014).",
   band_h:"Kostenlos in der Beta — testen",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"Datenschutz"},
  zh:{name:"中文",ver:"v2 · Apple 风格测试",nav_prog:"课程",nav_games:"游戏",nav_ben:"益处",nav_about:"关于",nav_dl:"下载",
@@ -211,7 +301,7 @@ const I18N={
   hooks:[["flask","真实科学","基于验证研究，绝非噱头。Stroop、N-back、Corsi、WCST 等，忠于原始范式。"],["target2","你的目标","9 套课程——选你的：从生物黑客到儿童再到棋手。"],["device","随处可用","Mac、Windows、Android，完全离线可用——数据留在你的设备上。"]],
   h_prog:"9 套课程——各有目标",h_prog_sub:"每套课程是针对一类人群的 9 个训练。",
   progs:[["NZT-48","生物黑客","完整前额叶训练组"],["Reaction PRO","飞行员·外科","秒级决策"],["创业者","创始人","压力下决策、风险、专注"],["Students PRO","SAT·GMAT·GRE","长时考试专注力"],["50+ 预防","活力衰老","记忆与速度"],["儿童 7–12","家长","趣味记忆、计算、反应"],["Micro-Relax","休闲","休息时的轻松游戏"],["速读","专业","拓宽视野，提升阅读速度"],["国际象棋","1500+ ELO","计算、空间、专注"]],
-  h_ben:"训练什么",doms:[["brain","记忆"],["target","注意力"],["puzzle","逻辑"],["bolt","速度"]],
+  h_shots:"实际效果",h_ben:"训练什么",doms:[["brain","记忆"],["target","注意力"],["puzzle","逻辑"],["bolt","速度"]],
   sci:"诚实：训练能在所练技能上带来可测量提升。我们不承诺“提高智商”——未经证实。依据真实研究（Jaeggi 2008；ACTIVE/Rebok 2014）。",
   band_h:"测试期免费——立即体验",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"隐私"},
  hi:{name:"हिन्दी",ver:"v2 · Apple-शैली टेस्ट",nav_prog:"प्रोग्राम",nav_games:"गेम",nav_ben:"लाभ",nav_about:"परिचय",nav_dl:"डाउनलोड",
@@ -222,7 +312,7 @@ const I18N={
   hooks:[["flask","असली विज्ञान","मान्य शोध पर आधारित — कोई झाँसा नहीं। Stroop, N-back, Corsi, WCST व अन्य, मूल पद्धतियों के अनुरूप।"],["target2","आपका लक्ष्य","9 प्रोग्राम — अपना चुनें: बायोहैकर से लेकर बच्चों और शतरंज खिलाड़ियों तक।"],["device","हर जगह","Mac, Windows, Android. पूरी तरह ऑफ़लाइन चलता है — आपका डेटा आपके डिवाइस पर ही रहता है।"]],
   h_prog:"9 प्रोग्राम — हर लक्ष्य के लिए",h_prog_sub:"हर प्रोग्राम एक दर्शक-वर्ग के लिए 9 ट्रेनर।",
   progs:[["NZT-48","बायोहैकर","पूर्ण प्रीफ्रंटल बैटरी"],["Reaction PRO","पायलट · सर्जन","पल भर के निर्णय"],["उद्यमी","फ़ाउंडर","दबाव में निर्णय, जोखिम, फोकस"],["Students PRO","SAT · GMAT · GRE","लंबी परीक्षाओं के लिए फोकस"],["50+ रोकथाम","सक्रिय बुढ़ापा","याददाश्त व गति"],["बच्चे 7–12","माता-पिता","खेल में याददाश्त, गिनती"],["Micro-Relax","कैज़ुअल","ब्रेक के लिए हल्के खेल"],["तेज़ पठन","पेशेवर","व्यापक दृष्टि, तेज़ पढ़ाई"],["शतरंज","1500+ ELO","गणना, स्थानिक, फोकस"]],
-  h_ben:"क्या ट्रेन करता है",doms:[["brain","याददाश्त"],["target","ध्यान"],["puzzle","तर्क"],["bolt","गति"]],
+  h_shots:"इसे क्रिया में देखें",h_ben:"क्या ट्रेन करता है",doms:[["brain","याददाश्त"],["target","ध्यान"],["puzzle","तर्क"],["bolt","गति"]],
   sci:"ईमानदार: ट्रेनिंग से प्रशिक्षित कौशल में मापने-योग्य सुधार होता है। “+IQ” का वादा नहीं — अप्रमाणित। असली अध्ययनों पर आधारित (Jaeggi 2008; ACTIVE/Rebok 2014)।",
   band_h:"बीटा में मुफ़्त — आज़माएँ",foot:"© 2026 PsyGames · Denis Onosov (ODV999)",priv:"गोपनीयता"}
 };
