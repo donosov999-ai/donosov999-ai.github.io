@@ -1,0 +1,444 @@
+# PsyGames — full text for language models
+> 61 cognitive trainers for memory, attention, logic and processing speed. Free browser demo, full training in the macOS / Windows / Android app. This file describes 48 of them page by page. Author: Denis Onosov (ODV999). Generated 2026-08-27 from the site's own source data.
+
+## Overview
+
+Check your attention in 60 seconds. Instant mini-test → personal baseline → a program that fits you. 61 trainers · no ads · no account.
+PsyGames turns cognitive science into a daily workout. Every exercise is a paradigm taken straight from the research lab — measured, adaptive, and built to push the skill you actually want sharper. No fluff, no pay-to-win, no ads. Just you versus your own benchmark.
+Honest: cognitive training gives measurable gains on the trained skills. We don’t promise “+IQ” — that’s unproven. Backed by real studies (Jaeggi 2008, PNAS; ACTIVE/Rebok 2014, JAMA).
+Android build: https://play.google.com/store/apps/details?id=com.psygames.app
+
+## What it trains
+
+- **Memory** — https://psy-games.pro/domains/memory/
+- **Attention** — https://psy-games.pro/domains/attention/
+- **Logic** — https://psy-games.pro/domains/logic/
+- **Speed** — https://psy-games.pro/domains/speed/
+
+## Programs (9)
+
+Each program is 9 trainers tuned to one audience and one goal. Pick the track that fits your brain and your life, then train 10 minutes a day.
+
+### NZT-48
+- Audience: Biohackers · ambitious self-optimizers
+- The full prefrontal battery for people who want maximum cognitive output. Trains working memory (N-back, OSpan), sustained attention, planning (Tower of London) and inhibition together. Expect sharper focus, faster mental switching and more mental stamina across a long workday.
+- Page: https://psy-games.pro/programs/nzt-48/
+
+### Reaction PRO
+- Audience: Pilots · surgeons · dispatchers · drivers
+- For high-stakes jobs where a split second matters. Drills sustained attention (CPT), choice reaction, Go/No-Go inhibition and rapid visual scanning under time pressure. Expect lower lapse rates, faster correct responses and steadier vigilance during long, monotonous shifts.
+- Page: https://psy-games.pro/programs/reaction-pro/
+
+### Entrepreneurs
+- Audience: Founders · executives · managers
+- Built for decisions made fast and under pressure. Trains risk judgment (BART, Iowa Gambling), task-switching, planning and resistance to distraction. Expect calmer choices in uncertainty, better multitasking and the ability to hold strategy in mind while juggling interruptions.
+- Page: https://psy-games.pro/programs/entrepreneurs/
+
+### Students PRO
+- Audience: SAT · GMAT · GRE · IELTS prep
+- Tuned for marathon exams that punish fatigue. Drills fast mental math, reading-span (verbal working memory), pattern reasoning and deep concentration. Expect higher accuracy late in a test, faster problem-solving and the focus to sit a 3-hour paper without fading.
+- Page: https://psy-games.pro/programs/students-pro/
+
+### 50+ Prevention
+- Audience: Active aging · adults 50–75+
+- Gentle, evidence-led training to keep the mind quick with age. Focuses on memory and processing speed using the gold-standard SDMT, plus matching and recall games. Expect better word recall, faster everyday thinking and a routine shown to help slow age-related cognitive decline.
+- Page: https://psy-games.pro/programs/50-plus/
+
+### Kids 7–12
+- Audience: Parents · learning centers
+- Playful brain training children actually want to repeat. Short 3–5 minute sessions of memory, counting and reaction games with rewards and no ads. Expect better attention in class, stronger working memory for homework and a screen habit that builds skills instead of wasting time.
+- Page: https://psy-games.pro/programs/kids-7-12/
+
+### Micro-Relax
+- Audience: Casual players · quick breaks
+- The most addictive light games for a genuine 5-minute reset. Matching, find-the-difference and 6×6 Sudoku — calm enough to unwind, just demanding enough to stay engaged. Expect a refreshing break that lightly exercises attention instead of doom-scrolling.
+- Page: https://psy-games.pro/programs/micro-relax/
+
+### Speed Reading PRO
+- Audience: Reading courses · knowledge workers
+- For people who read for a living and want to read more, faster. Widens the visual span, trains faster eye movements and strengthens retention with reading-span and rapid-search drills. Expect a noticeably wider eye span, less sub-vocalizing and better recall of what you just read.
+- Page: https://psy-games.pro/programs/speed-reading-pro/
+
+### Chess
+- Audience: Players 1500+ ELO · coaches
+- For competitive players who lose games to late-round fatigue, not weak openings. Trains deep calculation, spatial visualization (mental rotation) and the sustained attention to stay sharp across a long game. Expect cleaner calculation, fewer blunders in time trouble and steadier focus over 4+ hours.
+- Page: https://psy-games.pro/programs/chess/
+
+## Trainers (48 described here)
+
+Every PsyGames exercise is a validated paradigm from cognitive science. Tap any to see what it trains — all free, no ads, no account.
+
+### Schulte: Attention
+- Find numbers from 1 to N
+- What it trains: Visual scanning, peripheral vision and focus speed.
+- How it works: Find the numbers 1→N in order on the grid as fast as you can.
+- Difficulty: Grid grows from 3×3 to 7×7.
+- Page: https://psy-games.pro/games/schulte-attention/
+
+### Proofread: Focus
+- Find specific letters
+- What it trains: Selective and sustained attention.
+- How it works: Scan the text and mark every target letter — no misses, no false taps.
+- Difficulty: Longer text, more distractor letters.
+- Page: https://psy-games.pro/games/proofread-focus/
+
+### Find Differences
+- Spot what differs between two scenes
+- What it trains: Visual comparison and attention to detail.
+- How it works: Compare two scenes and spot every difference.
+- Difficulty: More and subtler differences, time limit.
+- Page: https://psy-games.pro/games/find-differences/
+
+### Word Pairs: Memory
+- Memorize word pairs
+- What it trains: Associative verbal memory (paired-associate learning).
+- How it works: Memorize pairs of words, then recall the partner when one is shown.
+- Difficulty: More pairs, shorter study time.
+- Page: https://psy-games.pro/games/word-pairs-memory/
+
+### Mnemonics: Sequence
+- Words and numbers in order
+- What it trains: Sequential memory and mnemonic encoding.
+- How it works: Hold an ordered list of words and numbers, then reproduce the order.
+- Difficulty: Longer sequences, mixed words and digits.
+- Page: https://psy-games.pro/games/mnemonics-sequence/
+
+### N-back: Working memory
+- Does flash position match one from N steps back?
+- What it trains: Working memory and fluid updating.
+- How it works: Decide whether the current flash matches the one N steps back.
+- Difficulty: N grows 1→2→3+; dual modality is hardest.
+- Page: https://psy-games.pro/games/n-back-working-memory/
+
+### Digit Span
+- Repeat sequence forward or backward
+- What it trains: Short-term verbal memory span.
+- How it works: Repeat the digit string — forward or backward.
+- Difficulty: Longer strings; backward is harder than forward.
+- Page: https://psy-games.pro/games/digit-span/
+
+### Memory Matrix
+- Memorise and repeat lit cells
+- What it trains: Visuospatial short-term memory.
+- How it works: Memorize the lit cells on the grid, then reproduce them.
+- Difficulty: Bigger grid, more cells, shorter flash.
+- Page: https://psy-games.pro/games/memory-matrix/
+
+### Picture Pairs
+- Reveal every matching pair
+- What it trains: Visual memory and recognition.
+- How it works: Flip cards to find every matching pair from memory.
+- Difficulty: More pairs, shorter preview.
+- Page: https://psy-games.pro/games/picture-pairs/
+
+### Reading Span: Memory
+- Judge sense, recall last words
+- What it trains: Working memory under language processing.
+- How it works: Judge whether each sentence makes sense, then recall the last word of each.
+- Difficulty: More sentences per set.
+- Page: https://psy-games.pro/games/reading-span-memory/
+
+### Corsi Blocks
+- Repeat the block sequence
+- What it trains: Visuospatial short-term memory.
+- How it works: Repeat the sequence in which the blocks light up.
+- Difficulty: Longer block sequences.
+- Page: https://psy-games.pro/games/corsi-blocks/
+
+### OSpan: Math+Memory
+- Solve equations, remember letters
+- What it trains: Complex working memory: storage plus processing.
+- How it works: Solve a quick equation, memorize a letter, then recall all letters in order.
+- Difficulty: More items per set.
+- Page: https://psy-games.pro/games/ospan-math-memory/
+
+### Spatial Span (Backward)
+- Reproduce sequence in reverse
+- What it trains: Visuospatial working memory and reversal.
+- How it works: Reproduce the spatial sequence in reverse order.
+- Difficulty: Longer sequences.
+- Page: https://psy-games.pro/games/spatial-span-backward/
+
+### Span: Sequence Memory
+- Digits or space, forward or backward
+- What it trains: Sequence memory — verbal or spatial.
+- How it works: Reproduce digit or spatial sequences, forward or backward.
+- Difficulty: Length, direction and modality scale up.
+- Page: https://psy-games.pro/games/span-sequence-memory/
+
+### Tower of Hanoi
+- Move all discs to the right peg
+- What it trains: Planning and means-end reasoning.
+- How it works: Move all discs to the target peg — never a larger disc on a smaller one.
+- Difficulty: More discs (minimum moves grow as 2ⁿ−1).
+- Page: https://psy-games.pro/games/tower-of-hanoi/
+
+### Sudoku 6×6
+- Digits 1–6 in each row, column and block
+- What it trains: Deductive logic and constraint satisfaction.
+- How it works: Fill the grid so digits 1–6 appear once in each row, column and block.
+- Difficulty: Fewer given digits (easy → hard).
+- Page: https://psy-games.pro/games/sudoku-6-6/
+
+### Anagrams
+- Reassemble word from shuffled letters
+- What it trains: Verbal flexibility and lexical access.
+- How it works: Rearrange the shuffled letters into a valid word.
+- Difficulty: Longer words, fewer hints.
+- Page: https://psy-games.pro/games/anagrams/
+
+### Patterns: Reasoning
+- Continue the number sequence
+- What it trains: Inductive reasoning.
+- How it works: Infer the rule and continue the number sequence.
+- Difficulty: More complex rules.
+- Page: https://psy-games.pro/games/patterns-reasoning/
+
+### SET: Triples
+- Find a triple by 4 attributes
+- What it trains: Abstract reasoning and feature analysis.
+- How it works: Find a triple where each of 4 attributes is all-same or all-different.
+- Difficulty: More cards on the table, time pressure.
+- Page: https://psy-games.pro/games/set-triples/
+
+### Mental Rotation
+- Find the rotated copy of a shape
+- What it trains: Spatial visualization.
+- How it works: Pick the shape that is a rotation — not a mirror — of the target.
+- Difficulty: Larger rotation angles, 3D shapes.
+- Page: https://psy-games.pro/games/mental-rotation/
+
+### Tower of London
+- Rearrange balls in minimum moves
+- What it trains: Planning and forethought.
+- How it works: Reach the goal arrangement of balls in the fewest moves.
+- Difficulty: More moves required to solve.
+- Page: https://psy-games.pro/games/tower-of-london/
+
+### Attention Conflict
+- Suppress automatic conflicting response
+- What it trains: Cognitive control and interference suppression.
+- How it works: Respond to the relevant feature while suppressing the conflicting automatic one.
+- Difficulty: More conflict trials, faster pace.
+- Page: https://psy-games.pro/games/attention-conflict/
+
+### Inhibition
+- Go/No-Go and Stop-Signal in one game
+- What it trains: Response inhibition (Go/No-Go and Stop-Signal combined).
+- How it works: Act on Go, withhold on No-Go, and abort when the stop signal appears.
+- Difficulty: Shorter windows, more stop trials.
+- Page: https://psy-games.pro/games/inhibition/
+
+### Stroop: Inhibition
+- Ink colour, not the word meaning
+- What it trains: Inhibition of the automatic reading response.
+- How it works: Name the ink colour — not the word.
+- Difficulty: More incongruent trials, faster.
+- Page: https://psy-games.pro/games/stroop-inhibition/
+
+### Go / No-Go: Inhibition
+- Tap on green, hold on red
+- What it trains: Impulse control.
+- How it works: Tap on green, hold back on red.
+- Difficulty: Rarer No-Go, faster stimuli.
+- Page: https://psy-games.pro/games/go-no-go-inhibition/
+
+### Stop-Signal: Inhibition
+- Press Go, but stop on signal
+- What it trains: Action cancellation.
+- How it works: Respond fast, but cancel the action when the stop signal appears.
+- Difficulty: Later and rarer stop signals.
+- Page: https://psy-games.pro/games/stop-signal-inhibition/
+
+### Trail Making
+- 1→A→2→B→3 — attention switching
+- What it trains: Attention switching and processing speed.
+- How it works: Connect targets alternating two rules — 1→A→2→B→3…
+- Difficulty: More items; mixed sequence is hardest.
+- Page: https://psy-games.pro/games/trail-making/
+
+### Task Switching
+- Alternate number/letter rules
+- What it trains: Cognitive flexibility.
+- How it works: Alternate between a number rule and a letter rule on cue.
+- Difficulty: Faster switches, less cueing.
+- Page: https://psy-games.pro/games/task-switching/
+
+### WCST: Rules
+- Find the hidden sorting rule
+- What it trains: Rule inference and set-shifting.
+- How it works: Discover the hidden sorting rule from feedback — it changes without warning.
+- Difficulty: More frequent rule shifts.
+- Page: https://psy-games.pro/games/wcst-rules/
+
+### Flanker: Arrows
+- React to the central arrow
+- What it trains: Selective attention and interference control.
+- How it works: Respond to the central arrow, ignoring the flanking arrows.
+- Difficulty: More incongruent trials, faster.
+- Page: https://psy-games.pro/games/flanker-arrows/
+
+### Emotional Stroop
+- Font color vs word meaning
+- What it trains: Emotional interference control.
+- How it works: Name the font colour, ignoring the emotional meaning of the word.
+- Difficulty: Stronger emotional words.
+- Page: https://psy-games.pro/games/emotional-stroop/
+
+### BART: Risk Balloon
+- Pump balloon or cash out
+- What it trains: Risk assessment and impulse control.
+- How it works: Pump the balloon for more reward — or bank it before it bursts.
+- Difficulty: Variable, unknown burst points.
+- Page: https://psy-games.pro/games/bart-risk-balloon/
+
+### Iowa: 4 Decks
+- Learn to avoid disadvantageous decks
+- What it trains: Value-based decision learning.
+- How it works: Learn by feedback to favour the advantageous decks.
+- Difficulty: Shifting payoff schedules.
+- Page: https://psy-games.pro/games/iowa-4-decks/
+
+### PRL: Reversal Learning
+- One of 2 colors pays +10. When rule reverses — switch
+- What it trains: Adaptive learning and flexibility.
+- How it works: Pick the rewarding colour; when the rule reverses, switch.
+- Difficulty: More frequent reversals.
+- Page: https://psy-games.pro/games/prl-reversal-learning/
+
+### Counter: Math
+- Make sums X+Y=Z
+- What it trains: Mental arithmetic and speed.
+- How it works: Combine numbers to make the target sum, X+Y=Z.
+- Difficulty: Bigger numbers, time limit.
+- Page: https://psy-games.pro/games/counter-math/
+
+### Mental Math Sprint
+- Solve as many problems as possible in time
+- What it trains: Calculation speed.
+- How it works: Solve as many problems as you can against the clock.
+- Difficulty: Harder operations, less time.
+- Page: https://psy-games.pro/games/mental-math-sprint/
+
+### Number Bonds: Math
+- Find numbers that sum to target
+- What it trains: Number sense and decomposition.
+- How it works: Pick the numbers that add up to the target.
+- Difficulty: Bigger targets, more options.
+- Page: https://psy-games.pro/games/number-bonds-math/
+
+### Targets: Reaction
+- React to colored objects
+- What it trains: Reaction speed and selective response.
+- How it works: Hit the valid coloured targets, avoid the rest.
+- Difficulty: Faster, more distractors.
+- Page: https://psy-games.pro/games/targets-reaction/
+
+### Choice RT: Speed
+- Tap in the arrow direction
+- What it trains: Choice reaction time.
+- How it works: Tap in the arrow's direction as fast as possible.
+- Difficulty: More choices, faster onset.
+- Page: https://psy-games.pro/games/choice-rt-speed/
+
+### Visual Search
+- Find T among many Ls
+- What it trains: Selective attention and feature binding.
+- How it works: Find the target T among many distractor Ls.
+- Difficulty: More distractors; conjunction search is hardest.
+- Page: https://psy-games.pro/games/visual-search/
+
+### SDMT: Symbol→Digit
+- Encode symbols by lookup table
+- What it trains: Processing speed and coding.
+- How it works: Convert symbols to digits using the key — as fast as possible.
+- Difficulty: Under time pressure.
+- Page: https://psy-games.pro/games/sdmt-symbol-digit/
+
+### Posner Cuing: Attention
+- React to target; cue may mislead
+- What it trains: Spatial orienting of attention.
+- How it works: Respond to the target; the cue may point to it truly or falsely.
+- Difficulty: More invalid cues, shorter cue-target gap.
+- Page: https://psy-games.pro/games/posner-cuing-attention/
+
+### ANT: Attention Networks
+- 3 attention networks in one test
+- What it trains: Alerting, orienting and executive attention together.
+- How it works: Respond to a central arrow combined with cues and flankers.
+- Difficulty: Combined cue and flanker conditions.
+- Page: https://psy-games.pro/games/ant-attention-networks/
+
+### CPT: Sustained Attention
+- Respond to all letters except X
+- What it trains: Vigilance and response inhibition over time.
+- How it works: Respond to every letter except the rare target X.
+- Difficulty: Longer blocks, rarer targets.
+- Page: https://psy-games.pro/games/cpt-sustained-attention/
+
+### Phonemic Fluency (COWAT)
+- Name max words on a letter in 60s
+- What it trains: Verbal fluency and retrieval.
+- How it works: Name as many words as you can starting with a given letter in 60s.
+- Difficulty: Rarer starting letters.
+- Page: https://psy-games.pro/games/phonemic-fluency-cowat/
+
+### Story Recall: detail memory
+- Read a story → recall now and after 90s
+- What it trains: Episodic memory for detail (immediate and delayed).
+- How it works: Read a short story, then recall it now and again after 90 seconds.
+- Difficulty: Longer stories, more detail to hold.
+- Page: https://psy-games.pro/games/story-recall-detail-memory/
+
+### Reading the Mind in the Eyes
+- Guess emotion from the eyes
+- What it trains: Social cognition and emotion recognition.
+- How it works: Infer the person's mental state from a photo of the eyes alone.
+- Difficulty: Subtler, more similar expressions.
+- Page: https://psy-games.pro/games/reading-the-mind-in-the-eyes/
+
+### Simon: Color vs Position
+- Color tells which button; position distracts
+- What it trains: Spatial interference control.
+- How it works: The colour tells which side to press; the position tries to distract you.
+- Difficulty: More incongruent trials, faster.
+- Page: https://psy-games.pro/games/simon-color-vs-position/
+
+## Articles
+
+- [how to train working memory](https://psy-games.pro/blog/how-to-train-working-memory/) — cluster: memory, published 2026-06-21, updated 2026-07-21
+- [retrieval practice and spacing](https://psy-games.pro/blog/retrieval-practice-and-spacing/) — cluster: memory, published 2026-07-21, updated 2026-07-21
+- [what is the stroop test](https://psy-games.pro/blog/what-is-the-stroop-test/) — cluster: attention, published 2026-06-20, updated 2026-07-21
+- [attention networks and flanker task](https://psy-games.pro/blog/attention-networks-and-flanker-task/) — cluster: attention, published 2026-07-21, updated 2026-07-21
+- [task switching and cognitive flexibility](https://psy-games.pro/blog/task-switching-and-cognitive-flexibility/) — cluster: logic, published 2026-07-21, updated 2026-07-21
+- [planning and problem solving](https://psy-games.pro/blog/planning-and-problem-solving/) — cluster: logic, published 2026-07-21, updated 2026-07-21
+- [processing speed and reaction time](https://psy-games.pro/blog/processing-speed-and-reaction-time/) — cluster: speed, published 2026-07-21, updated 2026-07-21
+- [speed accuracy tradeoff](https://psy-games.pro/blog/speed-accuracy-tradeoff/) — cluster: speed, published 2026-07-21, updated 2026-07-21
+- [retrieval practice and spacing](https://psy-games.pro/blog/retrieval-practice-and-spacing/) — cluster: memory, published 2026-07-21, updated 2026-07-21
+- [attention networks and flanker task](https://psy-games.pro/blog/attention-networks-and-flanker-task/) — cluster: attention, published 2026-07-21, updated 2026-07-21
+- [task switching and cognitive flexibility](https://psy-games.pro/blog/task-switching-and-cognitive-flexibility/) — cluster: logic, published 2026-07-21, updated 2026-07-21
+- [planning and problem solving](https://psy-games.pro/blog/planning-and-problem-solving/) — cluster: logic, published 2026-07-21, updated 2026-07-21
+- [processing speed and reaction time](https://psy-games.pro/blog/processing-speed-and-reaction-time/) — cluster: speed, published 2026-07-21, updated 2026-07-21
+- [speed accuracy tradeoff](https://psy-games.pro/blog/speed-accuracy-tradeoff/) — cluster: speed, published 2026-07-21, updated 2026-07-21
+
+## FAQ
+
+
+### Is PsyGames free?
+Yes — free during the beta. No ads, no pay-to-win, no hidden subscriptions.
+
+### Which platforms are supported?
+The full app is available for Mac, Windows and Android. The website offers only a short demo round without installation.
+
+### Does it work offline? What about my data?
+Fully offline. Your results stay on your device — no account required.
+
+### Is it actually science-based?
+Every trainer is a validated paradigm (Stroop, N-back, Corsi, WCST…). Training gives measurable gains on the trained skills — we do not promise «+IQ».
+
+### Are there ads or in-app purchases?
+No ads, ever. It is free during the beta — just you versus your own benchmark.
+
+## Licence and use
+
+Text and screenshots © 2026 PsyGames / Denis Onosov (ODV999). Quoting with attribution and a link to https://psy-games.pro/ is welcome.

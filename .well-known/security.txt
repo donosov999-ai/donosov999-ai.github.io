@@ -1,0 +1,8 @@
+# security.txt — RFC 9116. Замер audit-full 27.08.2026: секция `security-txt`
+# вернула {"isPresent": false} — исследователю некуда было написать о находке,
+# кроме общей почты поддержки, и не было понятно, читают ли её.
+Contact: mailto:help@psy-games.pro
+Expires: 2027-08-27T00:00:00.000Z
+Preferred-Languages: en, ru
+Canonical: https://psy-games.pro/.well-known/security.txt
+Policy: https://psy-games.pro/privacy/
