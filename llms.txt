@@ -1,0 +1,43 @@
+# PsyGames — cognitive brain trainers
+
+> 61 cognitive trainers for memory, attention, logic and processing speed. The browser demo offers one short round; full training, levels and progress are available in the installed apps for macOS, Windows and Android.
+
+## Pages
+- [Home](https://psy-games.pro/)
+- [Programs](https://psy-games.pro/programs/): structured cognitive-training programs
+- [Trainers](https://psy-games.pro/games/): 48 trainers described page by page
+- [Benefits](https://psy-games.pro/benefits/): the science behind cognitive training
+- [About](https://psy-games.pro/about/)
+- [Download](https://psy-games.pro/download/): macOS, Windows, Android
+- [Blog](https://psy-games.pro/blog/): articles on cognition and training
+- [Full text](https://psy-games.pro/llms-full.txt): every trainer, program and article in one file
+
+## About
+- 61 trainers: memory, attention, logic, speed
+- Platforms: macOS, Windows, Android
+- Browser demo: one short round; full training is in the installed app
+- Browser demo: free; app pricing is shown on the download page or in the relevant store
+
+## Who makes it
+- Author: Denis Onosov (ODV999)
+- Independent project, no ads and no account required for the browser demo
+- Android build: https://play.google.com/store/apps/details?id=com.psygames.app
+
+## What makes the trainers different
+- Every exercise is a validated paradigm from cognitive science, not a generic puzzle
+- Each one reports a specific psychometric measure — reaction time, span, error rate, variability — instead of a single vague "brain score"
+- Difficulty grows by task difficulty, not by shortening the clock
+- Progress, levels and full sessions live in the installed app; the browser demo is one short round
+
+## Programs
+- Morning warm-up and an evening wind-down set, assembled from different games so the two never repeat each other
+- The evening set is deliberately calm and ends with 4-7-8 breathing
+
+## Languages
+- 12: en, ru, es, pt, hi, zh, de, fr, it, ja, ko, ar. English lives at the root, the rest under /<lang>/.
+
+## Accessibility
+- Works with VoiceOver and TalkBack: controls are labelled and the game board is described in words
+
+## Freshness
+- Last updated: 2026-08-27
