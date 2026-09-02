@@ -1,0 +1,65 @@
+name: Зеркало не индексируется
+
+# 🔴 ЗАЧЕМ. Этот репозиторий — НАРОЧНОЕ зеркало сайта psy-games.pro на GitHub Pages
+# (SYNC.md: один источник — три цели). Полезно как запасной адрес, но для поисковика
+# это полный дубль: замер 03.09.2026 — https://donosov999-ai.github.io отдаёт 200 и
+# те же 98 301 байт, что и основной домен.
+#
+# ⚠️ Удалять зеркало нельзя — оно запасной путь. Редирект тоже: тогда оно перестанет
+# быть запасным путём. Убираем только из ВЫДАЧИ: `noindex, follow` — страницу не
+# показывать, ссылки с неё учитывать. `canonical` на psy-games.pro тут уже стоит, но
+# он подсказка, а не запрет; вместе они работают надёжнее.
+#
+# Почему не robots.txt с Disallow: запрет обхода мешает роботу УВИДЕТЬ noindex, и уже
+# попавшие в индекс страницы остаются там годами. Правильный порядок — пускать и
+# запрещать показ.
+#
+# Действие идёт на каждый push, потому что зеркало обновляется синком из psygames-astro
+# и любой синк затирает правку. Ручной шаг «не забудь дописать мету» забывается —
+# это и есть причина, по которой дубль дожил до сегодня.
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  noindex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Проставить noindex во все страницы
+        run: |
+          python3 - <<'PY'
+          import pathlib, re
+          МЕТА = '<meta name="robots" content="noindex,follow">'
+          тронуто = 0
+          for p in pathlib.Path('.').rglob('*.html'):
+              if '.git' in p.parts:
+                  continue
+              s = p.read_text(encoding='utf-8', errors='ignore')
+              if 'name="robots"' in s:
+                  continue
+              m = re.search(r'<head[^>]*>', s, re.I)
+              if not m:
+                  continue
+              p.write_text(s[:m.end()] + '\n' + МЕТА + s[m.end():], encoding='utf-8')
+              тронуто += 1
+          print(f'страниц дополнено: {тронуто}')
+          PY
+
+      - name: Зафиксировать, если что-то изменилось
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "все страницы уже с noindex — коммитить нечего"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "[bot] noindex на страницы зеркала: дубль не должен попадать в выдачу"
+          git push
