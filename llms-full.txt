@@ -1,9 +1,9 @@
 # PsyGames — full text for language models
-> 61 cognitive trainers for memory, attention, logic and processing speed. Free browser demo, full training in the macOS / Windows / Android app. This file describes 48 of them page by page. Author: Denis Onosov (ODV999). Generated 2026-08-27 from the site's own source data.
+> 64 cognitive trainers for memory, attention, logic and processing speed. Free browser demo, full training in the macOS / Windows / Android app. This file describes 64 of them page by page. Author: Denis Onosov (ODV999). Generated 2026-09-03 from the site's own source data.
 
 ## Overview
 
-Check your attention in 60 seconds. Instant mini-test → personal baseline → a program that fits you. 61 trainers · no ads · no account.
+Check your attention in 60 seconds. Instant mini-test → personal baseline → a program that fits you. 64 trainers · no ads · no account.
 PsyGames turns cognitive science into a daily workout. Every exercise is a paradigm taken straight from the research lab — measured, adaptive, and built to push the skill you actually want sharper. No fluff, no pay-to-win, no ads. Just you versus your own benchmark.
 Honest: cognitive training gives measurable gains on the trained skills. We don’t promise “+IQ” — that’s unproven. Backed by real studies (Jaeggi 2008, PNAS; ACTIVE/Rebok 2014, JAMA).
 Android build: https://play.google.com/store/apps/details?id=com.psygames.app
@@ -64,7 +64,7 @@ Each program is 9 trainers tuned to one audience and one goal. Pick the track th
 - For competitive players who lose games to late-round fatigue, not weak openings. Trains deep calculation, spatial visualization (mental rotation) and the sustained attention to stay sharp across a long game. Expect cleaner calculation, fewer blunders in time trouble and steadier focus over 4+ hours.
 - Page: https://psy-games.pro/programs/chess/
 
-## Trainers (48 described here)
+## Trainers (64 described here)
 
 Every PsyGames exercise is a validated paradigm from cognitive science. Tap any to see what it trains — all free, no ads, no account.
 
@@ -159,13 +159,6 @@ Every PsyGames exercise is a validated paradigm from cognitive science. Tap any 
 - Difficulty: Longer sequences.
 - Page: https://psy-games.pro/games/spatial-span-backward/
 
-### Span: Sequence Memory
-- Digits or space, forward or backward
-- What it trains: Sequence memory — verbal or spatial.
-- How it works: Reproduce digit or spatial sequences, forward or backward.
-- Difficulty: Length, direction and modality scale up.
-- Page: https://psy-games.pro/games/span-sequence-memory/
-
 ### Tower of Hanoi
 - Move all discs to the right peg
 - What it trains: Planning and means-end reasoning.
@@ -214,13 +207,6 @@ Every PsyGames exercise is a validated paradigm from cognitive science. Tap any 
 - How it works: Reach the goal arrangement of balls in the fewest moves.
 - Difficulty: More moves required to solve.
 - Page: https://psy-games.pro/games/tower-of-london/
-
-### Attention Conflict
-- Suppress automatic conflicting response
-- What it trains: Cognitive control and interference suppression.
-- How it works: Respond to the relevant feature while suppressing the conflicting automatic one.
-- Difficulty: More conflict trials, faster pace.
-- Page: https://psy-games.pro/games/attention-conflict/
 
 ### Inhibition
 - Go/No-Go and Stop-Signal in one game
@@ -403,6 +389,132 @@ Every PsyGames exercise is a validated paradigm from cognitive science. Tap any 
 - How it works: The colour tells which side to press; the position tries to distract you.
 - Difficulty: More incongruent trials, faster.
 - Page: https://psy-games.pro/games/simon-color-vs-position/
+
+### Eye Gymnastics
+- Warm up and unstrain your eyes from the screen
+- What it trains: Relieving: eye strain
+- How it works: Follow the moving dot with your eyes, shift focus far and near — five guided drills, no scoring.
+- Difficulty: No levels — a two-minute routine; relief comes right away.
+- Page: https://psy-games.pro/games/eye-gymnastics/
+
+### Goods Sort
+- Group three identical goods on a shelf
+- What it trains: Training: planning + visual memory
+- How it works: Move goods between shelf slots and collect triples of identical items; slots can be locked, covered or frozen.
+- Difficulty: 60 levels: board shapes, obstacles and goals keep changing the task.
+- Page: https://psy-games.pro/games/goods-sort/
+
+### Vocab SRS
+- Learn words with spaced repetition
+- What it trains: Training: vocabulary
+- How it works: Word cards come back exactly before you would forget them — spaced repetition.
+- Difficulty: Intervals grow with every correct answer; hard words return sooner.
+- Page: https://psy-games.pro/games/vocab-srs/
+
+### Word Sort
+- Which category does the word belong to?
+- What it trains: Training: vocabulary
+- How it works: Decide fast which category the word belongs to.
+- Difficulty: Finer categories, less time.
+- Page: https://psy-games.pro/games/word-sort/
+
+### Cloze
+- Which word is missing?
+- What it trains: Training: vocabulary
+- How it works: Pick the word that is missing from the phrase.
+- Difficulty: Longer phrases, closer answer options.
+- Page: https://psy-games.pro/games/cloze/
+
+### Word or Not?
+- Real word — or a fake?
+- What it trains: Training: vocabulary
+- How it works: Real word or a fake? Answer as fast as you can.
+- Difficulty: Pseudowords get ever more plausible.
+- Page: https://psy-games.pro/games/word-or-not/
+
+### Phonemes: Minimal Pairs
+- Hear the difference: ship or sheep?
+- What it trains: Training: listening
+- How it works: Listen and pick which word of the minimal pair was spoken.
+- Difficulty: The pairs sound ever closer.
+- Page: https://psy-games.pro/games/phonemes-minimal-pairs/
+
+### Echo: Pseudowords
+- Hear a made-up word — pick its spelling
+- What it trains: Training: listening
+- How it works: Hear a made-up word and find its correct spelling.
+- Difficulty: Longer pseudowords, look-alike spellings.
+- Page: https://psy-games.pro/games/echo-pseudowords/
+
+### Listening Span
+- Hear the words — repeat the order
+- What it trains: Training: working memory
+- How it works: Listen to a series of words and reproduce the order.
+- Difficulty: The series gets longer.
+- Page: https://psy-games.pro/games/listening-span/
+
+### Board in Mind
+- Board visualization trainer: squares, knight, memory
+- What it trains: Training: visual memory
+- How it works: Hold the board in your mind: name square colors, guide the knight, recall pieces.
+- Difficulty: From training wheels to a fully blind board.
+- Page: https://psy-games.pro/games/board-in-mind/
+
+### Mahjong
+- Remove matching free tiles
+- What it trains: Training: visual search
+- How it works: Remove matching free tiles from the layout; some faces are hidden.
+- Difficulty: Taller layouts, more hidden tiles.
+- Page: https://psy-games.pro/games/mahjong/
+
+### Samurai
+- Five overlapping 9×9 grids sharing corner blocks; standard sudoku in each.
+- What it trains: Training: logic
+- How it works: Five overlapping 9×9 grids share corner blocks — solve them as one puzzle.
+- Difficulty: A mega-boss: one game is an evening.
+- Page: https://psy-games.pro/games/samurai/
+
+### Fractal Sudoku
+- Behind every cell of the top grid hides a whole sudoku
+- What it trains: Training: logic
+- How it works: Solve a child grid — its center cell unlocks a digit of the parent.
+- Difficulty: 15 levels of nesting and density.
+- Page: https://psy-games.pro/games/fractal-sudoku/
+
+### Fractal: The Abyss
+- Sudoku inside sudoku inside sudoku — a marathon into the deep
+- What it trains: Training: logic
+- How it works: Descend through nested sudoku along your chosen path; portals link the branches.
+- Difficulty: Presets from ~10 to ~2860 grids.
+- Page: https://psy-games.pro/games/fractal-the-abyss/
+
+### Eyes & breathing
+- Plus face, posture, relaxation and mobility — a short body pause with no scoring
+- What it trains: Restoring: nervous system
+- How it works: Short guided body pauses: eyes, breathing, face, posture — step by step with a timer.
+- Difficulty: No scores or levels; pick a 2–8 minute format.
+- Page: https://psy-games.pro/games/eyes-breathing/
+
+### Math Slider
+- Estimate the result and place a marker on the number line
+- What it trains: Training: mental math
+- How it works: Estimate the result and place a marker on the number line.
+- Difficulty: Wider ranges, tighter tolerance.
+- Page: https://psy-games.pro/games/math-slider/
+
+### Quick Count
+- How many dots — no counting
+- What it trains: Training: concentration
+- How it works: Judge how many dots at a glance — no counting.
+- Difficulty: More dots, less time.
+- Page: https://psy-games.pro/games/quick-count/
+
+### Breathing
+- Calm in a few minutes
+- What it trains: Restoring: nervous system
+- How it works: Breathe along an animated pattern: inhale — hold — exhale.
+- Difficulty: No levels; rhythms go from simple to deep.
+- Page: https://psy-games.pro/games/breathing/
 
 ## Articles
 
